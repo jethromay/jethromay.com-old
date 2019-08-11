@@ -29,4 +29,4 @@ Feel free to submit a pull request if you notice anything that needs to be addre
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE).
