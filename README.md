@@ -7,8 +7,8 @@ My personal website running on Gatsby & React.
 ```
 git clone https://github.com/jethromay/jethromay.com
 cd jethromay.com
-yarn
-yarn run dev
+npm install
+npm start
 ```
 
 Navigate to ```localhost:8000```

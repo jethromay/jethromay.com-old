@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jethromay.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal website running on Gatsby & React.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
     "gatsby": "^2.13.57",
     "gatsby-image": "^2.2.8",
