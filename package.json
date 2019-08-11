@@ -21,11 +21,11 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "write-good": "^1.0.2"
+    "write-good": "^1.0.2",
+    "tailwindcss": "^1.1.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "tailwindcss": "^1.1.1"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
