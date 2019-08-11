@@ -5,10 +5,12 @@
   "version": "0.1.0",
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
+    "autoprefixer": "^9.6.1",
     "gatsby": "^2.13.57",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-manifest": "^2.2.5",
     "gatsby-plugin-offline": "^2.2.5",
+    "gatsby-plugin-postcss": "^2.1.2",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sharp": "^2.2.11",
     "gatsby-source-filesystem": "^2.1.9",
@@ -19,7 +21,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.1.1"
   },
   "keywords": [
     "gatsby"
@@ -35,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jethromay/jethromay.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jethromay/jethromay.com/issues"
   }
 }
