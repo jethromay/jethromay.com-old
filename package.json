@@ -20,6 +20,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-github-btn": "^1.0.6",
     "react-helmet": "^5.2.1",
     "tailwindcss": "^1.1.2",
     "write-good": "^1.0.2"
