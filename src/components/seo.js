@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, title }) {
         }
       }
     `
-  )
+  );
 
   const metaDescription = description || site.siteMetadata.description
 
@@ -31,6 +31,9 @@ function SEO({ description, lang, meta, title }) {
     <Helmet
       htmlAttributes={{
         lang,
+      }}
+      bodyAttributes={{
+        class: 'antialiased lg:border-t-2 lg:border-blue-500'
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -76,13 +79,13 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
 export default SEO
