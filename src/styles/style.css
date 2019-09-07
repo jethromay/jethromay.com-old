@@ -8,4 +8,15 @@
     }
 }
 
+.ko-fi img {
+    width: 35px;
+}
+
+.twitter-widget {
+    position: static;
+    visibility: visible;
+    width: 178px;
+    height: 28px;
+}
+
 @tailwind utilities;
