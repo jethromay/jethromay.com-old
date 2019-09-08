@@ -17,7 +17,8 @@ export default class Index extends Component {
                         <div className="social flex">
                             <a className="twitter-follow-button"
                                href="https://twitter.com/may_jethro"
-                               data-size="large">
+                               data-size="large"
+                               data-show-screen-name="false">
                                 Follow
                             </a>
                             <GitHubButton
