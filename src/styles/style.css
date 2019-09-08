@@ -19,4 +19,15 @@
     height: 28px;
 }
 
+.project-link {
+    padding-top: 60%;
+}
+
+.project {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 @tailwind utilities;
