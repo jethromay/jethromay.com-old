@@ -20,7 +20,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/content/posts`,
       },
     },
     {
