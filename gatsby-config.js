@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
+const config = require('./config/website');
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://jethromay.com`,

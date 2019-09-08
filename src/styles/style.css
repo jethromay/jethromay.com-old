@@ -12,6 +12,10 @@
     width: 35px;
 }
 
+.twitter-follow-button {
+    margin-right: 0.5rem;
+}
+
 .project-link {
     padding-top: 60%;
 }
