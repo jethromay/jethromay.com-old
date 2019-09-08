@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://jethromay.com`,
     title: `Jethro May`,
     description: `Is a web developer & writer with a passion for Laravel.`,
     author: `@jethromay`,
