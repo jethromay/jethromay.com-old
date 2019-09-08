@@ -33,16 +33,16 @@ const Header = ({ siteTitle }) => (
                id="nav-content">
               <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                   <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
-                      <Link to="/" className="hover:underline">Home</Link>
+                      <Link to="/" activeClassName="active" className="hover:underline">Home</Link>
                   </li>
                   <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                      <Link to="/about" className="hover:underline">About</Link>
+                      <Link to="/about" activeClassName="active" className="hover:underline">About</Link>
                   </li>
                   <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                      <Link to="/articles" className="hover:underline">Articles</Link>
+                      <Link to="/articles" activeClassName="active" className="hover:underline">Articles</Link>
                   </li>
                   <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                      <Link to="/contact" className="hover:underline">Contact</Link>
+                      <Link to="/contact" activeClassName="active" className="hover:underline">Contact</Link>
                   </li>
                   <li className="lg:ml-3 xs:py-1 sm:py-3">
                       <a href='https://ko-fi.com/jethromay' className="ko-fi" target="_blank" rel="noopener noreferrer">

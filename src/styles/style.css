@@ -27,4 +27,8 @@
     bottom: 0;
 }
 
+.active {
+    font-weight: bold;
+}
+
 @tailwind utilities;
