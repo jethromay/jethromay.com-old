@@ -30,6 +30,7 @@
     "write-good": "^1.0.2"
   },
   "devDependencies": {
+    "cypress": "^3.4.1",
     "prettier": "^1.18.2"
   },
   "keywords": [
