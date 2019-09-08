@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
