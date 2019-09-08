@@ -18,7 +18,8 @@ export default class Index extends Component {
                             <a className="twitter-follow-button"
                                href="https://twitter.com/may_jethro"
                                data-size="large">
-                                Follow @may_jethro</a>
+                                Follow
+                            </a>
                             <GitHubButton
                                 href="https://github.com/jethromay"
                                 data-size="large"
