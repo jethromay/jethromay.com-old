@@ -62,7 +62,7 @@ export default class Index extends React.Component {
 
                 <hr className="border bg-green-100" />
 
-                <section className="mt-8 mb-8">
+                <section className="mt-8 mb-16">
                     <div className="container mx-auto">
                         <h2 className="font-bold text-3xl mb-6 text-left">Featured Projects</h2>
 
