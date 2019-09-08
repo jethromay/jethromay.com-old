@@ -15,7 +15,7 @@ export default class Index extends Component {
                         <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
                         <p className="mb-4">I am a web developer & writer with a passion for Laravel.</p>
                         <div className="social flex">
-                            <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw"
+                            <a href="https://twitter.com/may_jethro"
                                className="twitter-follow-button"
                                data-show-count="false">Follow @may_jethro
                             </a>

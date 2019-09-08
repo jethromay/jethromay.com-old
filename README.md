@@ -1,6 +1,8 @@
 # jethromay.com
 
-My personal website running on Gatsby & React.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+Welcome to jethromay.com, a modern website built with Gatsby, React & Tailwind. While my project is open source, i encourage you not to copy or reuse the code in this repository. This repository exists to showcase what i have learnt during my career as a web developer.
 
 ### Installation
 
