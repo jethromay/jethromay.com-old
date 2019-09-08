@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-My personal website built with Gatsby, React & Tailwind. 
+My personal website built with Gatsby, Node & React. 
 
 While my project is open source, i encourage you not to copy or reuse the code in this repository. This repository exists to showcase what i have learnt during my career as a web developer.
 
@@ -20,6 +20,7 @@ Navigate to ```localhost:8000```
 ## Built With
 
 * [Gatsby](https://www.gatsbyjs.org) 
+* [Node](https://nodejs.org/en/) 
 * [React](https://reactjs.org/)
 * [Tailwind](https://tailwindcss.com/)
 

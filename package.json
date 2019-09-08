@@ -1,7 +1,7 @@
 {
   "name": "jethromay.com",
   "private": true,
-  "description": "Personal website running on Gatsby & React.",
+  "description": "Personal website running on Gatsby, Node & React.",
   "version": "0.1.0",
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
@@ -44,7 +44,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "write-good": "write-good $(glob 'posts/*.md')"
+    "write-good": "write-good $(glob 'posts/*.md')",
+    "cypress": "cypress open"
   },
   "repository": {
     "type": "git",
