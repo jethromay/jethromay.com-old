@@ -15,10 +15,10 @@ export default class Index extends Component {
                         <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
                         <p className="mb-4">I am a web developer & writer with a passion for Laravel.</p>
                         <div className="social flex">
-                            <a href="https://twitter.com/may_jethro"
-                               className="twitter-follow-button"
-                               data-show-count="false">Follow @may_jethro
-                            </a>
+                            <a className="twitter-follow-button"
+                               href="https://twitter.com/may_jethro"
+                               data-size="large">
+                                Follow @may_jethro</a>
                             <GitHubButton
                                 href="https://github.com/jethromay"
                                 data-size="large"
@@ -67,7 +67,7 @@ export default class Index extends Component {
                             <div className="md:flex">
                                 <div className="md:w-1/2 md:pt-16 md:pr-0 md:pl-12">
                                     <Link className="project-link block relative"
-                                       to="https://tailwindcss.com/">
+                                       to="/">
                                         <img className="project absolute block rounded-t md:shadow-lg-dark"
                                              src={project} alt="Tailwind CSS"
                                         />
