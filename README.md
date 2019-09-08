@@ -4,7 +4,7 @@
 
 My personal website built with Gatsby, Node & React. 
 
-While my project is open source, i encourage you not to copy or reuse the code in this repository. This repository exists to showcase what i have learnt during my career as a web developer.
+While my project is open source, i encourage you not to copy or reuse the code in this repository. This repository exists to showcase what i have learnt during my career as a web developer with the hope that it will benefit others.
 
 ## Built With
 
