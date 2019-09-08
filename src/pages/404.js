@@ -1,9 +1,9 @@
-import React, {Component} from "react"
+import React from "react"
 
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
-export default class NotFoundPage extends Component {
+export default class NotFoundPage extends React.Component {
     render() {
         return (
             <Layout>

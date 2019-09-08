@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React  from "react"
 
-export default class Footer extends Component {
+export default class Footer extends React.Component {
     render() {
         return (
             <footer className="flex-none pt-10 pb-10 pr-5 pl-5">

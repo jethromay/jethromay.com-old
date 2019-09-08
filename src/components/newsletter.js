@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 
-export default class Newsletter extends Component {
+export default class Newsletter extends React.Component {
     render() {
         return (
             <aside className="mt-10 mb-10 xs:px-4 sm:px-4 md:px-4 lg:px-0">

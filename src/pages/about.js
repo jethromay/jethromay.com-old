@@ -1,10 +1,10 @@
-import React, {Component} from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
-export default class About extends Component {
+export default class About extends React.Component {
     render() {
         return (
             <Layout>
