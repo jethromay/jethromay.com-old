@@ -4,6 +4,7 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 import GitHubButton from 'react-github-btn'
 import project from '../images/tailwind-screenshot.jpg'
+import Newsletter from "../components/newsletter";
 
 export default class Index extends Component {
     render() {
@@ -91,6 +92,8 @@ export default class Index extends Component {
                         </div>
                     </div>
                 </section>
+
+                <Newsletter />
 
             </Layout>
         )
