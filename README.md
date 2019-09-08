@@ -1,6 +1,7 @@
 # jethromay.com
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/84398e24-39de-45d5-bab1-284176cf67cc/deploy-status)](https://app.netlify.com/sites/fervent-booth-91b3de/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 
 My personal website built with Gatsby, Node & React. 
 
