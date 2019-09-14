@@ -6,20 +6,20 @@
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
     "autoprefixer": "^9.6.1",
-    "gatsby": "^2.15.9",
-    "gatsby-image": "^2.2.17",
-    "gatsby-plugin-google-analytics": "^2.1.14",
-    "gatsby-plugin-manifest": "^2.2.14",
-    "gatsby-plugin-netlify": "^2.1.11",
+    "gatsby": "^2.15.15",
+    "gatsby-image": "^2.2.19",
+    "gatsby-plugin-google-analytics": "^2.1.16",
+    "gatsby-plugin-manifest": "^2.2.16",
+    "gatsby-plugin-netlify": "^2.1.13",
     "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-postcss": "^2.1.6",
-    "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-sharp": "^2.2.20",
-    "gatsby-plugin-sitemap": "^2.2.10",
-    "gatsby-plugin-twitter": "^2.1.5",
-    "gatsby-source-filesystem": "^2.1.21",
-    "gatsby-transformer-remark": "^2.6.21",
-    "gatsby-transformer-sharp": "^2.2.13",
+    "gatsby-plugin-postcss": "^2.1.7",
+    "gatsby-plugin-react-helmet": "^3.1.7",
+    "gatsby-plugin-sharp": "^2.2.22",
+    "gatsby-plugin-sitemap": "^2.2.12",
+    "gatsby-plugin-twitter": "^2.1.6",
+    "gatsby-source-filesystem": "^2.1.22",
+    "gatsby-transformer-remark": "^2.6.22",
+    "gatsby-transformer-sharp": "^2.2.14",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -29,8 +29,12 @@
     "write-good": "^1.0.2"
   },
   "devDependencies": {
-    "cypress": "^3.4.1",
-    "prettier": "^1.18.2"
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.13",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.9.0"
   },
   "keywords": [
     "gatsby",
@@ -44,8 +48,7 @@
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "write-good": "write-good $(glob 'content/posts/*.md')",
-    "cypress": "cypress open"
+    "write-good": "write-good $(glob 'content/posts/*.md')"
   },
   "repository": {
     "type": "git",
