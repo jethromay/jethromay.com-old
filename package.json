@@ -29,8 +29,12 @@
     "write-good": "^1.0.2"
   },
   "devDependencies": {
-    "cypress": "^3.4.1",
-    "prettier": "^1.18.2"
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.13",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.9.0"
   },
   "keywords": [
     "gatsby",
@@ -44,8 +48,7 @@
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "write-good": "write-good $(glob 'content/posts/*.md')",
-    "cypress": "cypress open"
+    "write-good": "write-good $(glob 'content/posts/*.md')"
   },
   "repository": {
     "type": "git",
