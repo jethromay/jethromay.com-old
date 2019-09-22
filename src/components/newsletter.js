@@ -3,7 +3,7 @@ import React from "react"
 export default class Newsletter extends React.Component {
     render() {
         return (
-            <aside className="mt-10 mb-10 xs:px-4 sm:px-4 md:px-4 lg:px-0">
+            <aside className="mt-10 mb-10">
                 <div className="container mx-auto bg-gray-200 py-6 px-6 rounded">
                     <p className="mt-2">Want to stay up to date with the latest content? Join my mailing list to receive updates.
                         Unsubscribe when ever.</p>
