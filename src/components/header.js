@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import config from '../../config/website'
 import { Link } from "gatsby"
 import kofi from '../images/ko-fi.png'
@@ -27,7 +27,6 @@ export default class Header extends React.Component {
 
     render() {
         const { scrolled } = this.state
-        const [isExpanded, toggleExpansion] = useState(false);
 
         return (
             <header id="header"
@@ -45,8 +44,7 @@ export default class Header extends React.Component {
                         </Link>
 
                         <div className="block lg:hidden">
-                            <button onClick={() => toggleExpansion(!isExpanded)}
-                                    id="nav-toggle"
+                            <button id="nav-toggle"
                                     className="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-grey-lightest hover:border-blue-300 appearance-none focus:outline-none">
                                 <svg className="inline fill-current text-gray-500 h-3 w-3" viewBox="0 0 20 20"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +56,7 @@ export default class Header extends React.Component {
                         </div>
                     </div>
 
-                    <div className={`${ isExpanded ? `block` : `hidden` } w-full flex-grow lg:flex lg:items-center lg:w-1/2 lg:block mt-2 lg:mt-0`}
+                    <div className=" w-full flex-grow xs:hidden sm:hidden lg:flex lg:items-center lg:w-1/2 lg:block mt-2 lg:mt-0"
                          id="nav-content">
                         <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                             <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
