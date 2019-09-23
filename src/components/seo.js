@@ -1,84 +1,24 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import config from "../../config/website"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
+export default class SEO extends React.Component {
+  render() {
+    return (
+        <Helmet>
+          <meta name="description" content={config.siteDescription} />
+          <meta name="image" content="" />
 
-  const metaDescription = description || site.siteMetadata.description;
+          <meta property="og:title" content={config.siteTitle} />
+          <meta property="og:description" content={config.siteDescription} />
+          <meta property="og:image" content="" />
 
-  return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      bodyAttributes={{
-        class: 'antialiased lg:border-t-2 lg:border-blue-500'
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
-  )
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={config.twitterAccount} />
+          <meta name="twitter:title" content={config.siteTitle} />
+          <meta name="twitter:description" content={config.siteDescription} />
+          <meta name="twitter:image" content="" />
+        </Helmet>
+    )
+  }
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-};
-
-export default SEO

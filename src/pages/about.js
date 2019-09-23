@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Helmet from "react-helmet"
+import config from "../../config/website"
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
@@ -8,7 +9,8 @@ export default class About extends React.Component {
     render() {
         return (
             <Layout>
-                <SEO title="About"/>
+                <Helmet title={`About – ${config.siteTitle}`} />
+                <SEO />
                 <div className="container lg:mt-20 lg:mb-20">
                     <h1 className="font-bold text-5xl mb-4">About</h1>
                     <div className="mb-10">
