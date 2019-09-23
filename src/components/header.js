@@ -52,9 +52,13 @@ function Header ({ siteTitle }) {
                             <Link to="/contact" activeClassName="active" className="hover:underline">Contact</Link>
                         </li>
                         <li className="lg:ml-3 xs:py-1 sm:py-3">
-                            <a href='https://ko-fi.com/jethromay' className="ko-fi" target="_blank"
-                               rel="noopener noreferrer">
-                                <img src={kofi} alt="Buy me a coffee!"/>
+                            <a href='https://ko-fi.com/jethromay'
+                               className="ko-fi"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Buy me a coffee on Kofi!"
+                               title="Buy me a coffee on Kofi!">
+                                <img src={kofi} alt="Buy me a coffee on Kofi!"/>
                             </a>
                         </li>
                     </ul>
