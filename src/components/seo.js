@@ -6,17 +6,17 @@ export default class SEO extends React.Component {
   render() {
     return (
         <Helmet>
-          <meta name="description" content="" />
+          <meta name="description" content={config.siteDescription} />
           <meta name="image" content="" />
 
-          <meta property="og:title" content="" />
-          <meta property="og:description" content="" />
+          <meta property="og:title" content={config.siteTitle} />
+          <meta property="og:description" content={config.siteDescription} />
           <meta property="og:image" content="" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="" />
-          <meta name="twitter:title" content="" />
-          <meta name="twitter:description" content="" />
+          <meta name="twitter:creator" content={config.twitterAccount} />
+          <meta name="twitter:title" content={config.siteTitle} />
+          <meta name="twitter:description" content={config.siteDescription} />
           <meta name="twitter:image" content="" />
         </Helmet>
     )
