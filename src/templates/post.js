@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
+import config from "../../config/website"
 
 class PostTemplate extends React.Component {
     render() {
