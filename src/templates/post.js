@@ -1,34 +1,92 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Layout from "../layout/layout"
+import SEO from "../components/seo"
 
-export default function Template({
-    data
-}) {
-    const { markdownRemark } = data
-    const { frontmatter, html } = markdownRemark
-    return (
-        <div className="blog-post-container">
-            <div className="blog-post">
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <div
-                    className="blog-post-content"
-                    dangerouslySetInnerHTML={{ __html: html }}
+class PostTemplate extends React.Component {
+    render() {
+        const post = this.props.data.markdownRemark
+        const siteTitle = this.props.data.site.siteMetadata.title
+        const { previous, next } = this.props.pageContext
+
+        return (
+            <Layout location={this.props.location} title={siteTitle}>
+                <SEO
+                    title={post.frontmatter.title}
+                    description={post.frontmatter.description || post.excerpt}
                 />
-            </div>
-        </div>
-    )
+                <article>
+                    <header>
+                        <h1
+                            style={{
+                                marginBottom: 0,
+                            }}
+                        >
+                            {post.frontmatter.title}
+                        </h1>
+                        <p
+                            style={{
+                                display: `block`,
+                            }}
+                        >
+                            {post.frontmatter.date}
+                        </p>
+                    </header>
+                    <section dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <footer>
+
+                    </footer>
+                </article>
+
+                <nav>
+                    <ul
+                        style={{
+                            display: `flex`,
+                            flexWrap: `wrap`,
+                            justifyContent: `space-between`,
+                            listStyle: `none`,
+                            padding: 0,
+                        }}
+                    >
+                        <li>
+                            {previous && (
+                                <Link to={previous.fields.slug} rel="prev">
+                                    ← {previous.frontmatter.title}
+                                </Link>
+                            )}
+                        </li>
+                        <li>
+                            {next && (
+                                <Link to={next.fields.slug} rel="next">
+                                    {next.frontmatter.title} →
+                                </Link>
+                            )}
+                        </li>
+                    </ul>
+                </nav>
+            </Layout>
+        )
+    }
 }
 
-// export const pageQuery = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         path
-//         title
-//       }
-//     }
-//   }
-// `
+export default PostTemplate
+
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+      }
+    }
+  }
+`
