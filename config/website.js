@@ -1,7 +1,7 @@
 const website = {
     siteTitle: 'Jethro May',
     siteDescription: 'Web Developer & Writer',
-    siteUrl: '',
+    siteUrl: 'https://jethromay.com',
     siteLogo: '',
     twitterAccount: 'may_jethro'
 }

@@ -1,12 +1,8 @@
-require('dotenv').config({
-  path: `.env`,
-});
-
 const config = require('./config/website');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://jethromay.com`,
+    siteUrl: config.siteUrl,
     title: `Jethro May`,
     description: `Is a web developer & writer with a passion for Laravel.`,
     author: `@jethromay`,
@@ -36,10 +32,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jethro May`,
+        name: config.siteTitle,
         short_name: `Jethro May`,
+        description: config.siteDescription,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
