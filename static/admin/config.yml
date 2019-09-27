@@ -3,7 +3,6 @@ backend:
   repo: jethromay/jethromay.com
 
 media_folder: static/assets
-public_folder: assets
 
 collections:
   - name: blog
