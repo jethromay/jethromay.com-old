@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import Helmet from "react-helmet"
-import config from "../../config/website"
-import Layout from "../layout/layout"
-import SEO from "../components/seo"
+import config from "../config/website"
+import Layout from "../src/layout/layout"
+import SEO from "../src/components/seo"
 
 export default class Contact extends React.Component {
     render() {
