@@ -7,7 +7,7 @@ import config from "../../config/website"
 
 export default class Page extends React.Component {
     render() {
-        const postNode = this.props.data.markdownRemark
+        const pageNode = this.props.data.markdownRemark
         const page = postNode.frontmatter
 
         return (
@@ -21,7 +21,7 @@ export default class Page extends React.Component {
                         <header>
                             <h1 className="font-bold text-5xl mb-4">{page.title}</h1>
                         </header>
-                        <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                        <div dangerouslySetInnerHTML={{ __html: pageNode.html }} />
                     </article>
                 </div>
             </Layout>
