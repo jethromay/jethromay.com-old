@@ -4,8 +4,5 @@ slug: contact
 template: page
 ---
 
-#### You may contact me via email or connect with me around the web.
-
-- **Email**: [hello@jethromay.com](mailto:hello[AT]jethromay[DOT]com)
-- **GitHub**: [jethromay](https://github.com/jethromay)
-- **Twitter**: [may_jethro](https://twitter.com/may_jethro)
+Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
+seem to really enjoy bananas!
