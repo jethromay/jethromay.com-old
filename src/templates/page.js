@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import SEO from "../components/seo";
@@ -7,20 +7,15 @@ import config from "../../config/website"
 
 export default class Page extends React.Component {
     render() {
-        const { slug } = this.props.pageContext
         const postNode = this.props.data.markdownRemark
         const page = postNode.frontmatter
-
-        if (!page.id) {
-            page.id = slug
-        }
 
         return (
             <Layout>
                 <Helmet>
                     <title>{`${page.title} - ${config.siteTitle}`}</title>
                 </Helmet>
-                <SEO postPath={slug} postNode={postNode}/>
+                <SEO postNode={postNode}/>
                 <div className="container lg:mt-20 lg:mb-20">
                     <article>
                         <header>
@@ -36,12 +31,11 @@ export default class Page extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query PageBySlug($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
-        template
       }
       fields {
         slug
