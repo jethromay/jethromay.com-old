@@ -4,8 +4,7 @@ slug: contact
 template: page
 ---
 
-Do you have an idea or simply want to reach out? You may contact me via email or connect with me around the web.  
-
+Do you have an idea or simply want to reach out? You may contact me via email or connect with me around the web.    
 - **Email**: [hello@jethromay.com](mailto:hello@jethromay.com)
 - **GitHub**: [jethromay](https://github.com/jethromay)
 - **Twitter**: [may_jethro](https://twitter.com/may_jethro)
