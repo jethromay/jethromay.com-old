@@ -8,14 +8,14 @@ import config from "../../config/website"
 export default class Page extends React.Component {
     render() {
         const pageNode = this.props.data.markdownRemark
-        const page = postNode.frontmatter
+        const page = pageNode.frontmatter
 
         return (
             <Layout>
                 <Helmet>
                     <title>{`${page.title} - ${config.siteTitle}`}</title>
                 </Helmet>
-                <SEO postNode={postNode}/>
+                <SEO pageNode={pageNode}/>
                 <div className="container lg:mt-20 lg:mb-20">
                     <article>
                         <header>
