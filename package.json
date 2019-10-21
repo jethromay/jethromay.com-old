@@ -1,0 +1,27 @@
+{
+  "name": "jethromay.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Jethro May <hello@jethromay.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jethromay/jethromay.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jethromay/jethromay.com/issues"
+  },
+  "homepage": "https://github.com/jethromay/jethromay.com#readme"
+}
