@@ -1,19 +1,15 @@
 import React from "react"
-import Helmet from "react-helmet"
-import config from "../../config/website"
-import Layout from "../layout/layout"
-import SEO from "../components/seo"
-import Articles from "../components/articles"
-import Projects from "../components/projects"
-import GitHubButton from "react-github-btn"
-import Newsletter from "../components/newsletter";
+import config from "../config/website"
+import Layout from "../components/layout"
+// import Articles from "../components/articles"
+// import Projects from "../components/projects"
+// import GitHubButton from "react-github-btn"
+// import Newsletter from "../components/newsletter";
 
 export default class Index extends React.Component {
     render() {
         return (
             <Layout>
-                <Helmet title={`${config.siteTitle} – Web Developer & Writer`} />
-                <SEO />
                 <div className="intro lg:pt-20 lg:pb-10 mb-10">
                     <div className="flex flex-col">
                         <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>

@@ -1,16 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import Helmet from "react-helmet"
 import config from "../config/website"
 import Layout from "../src/layout/layout"
-import SEO from "../src/components/seo"
 
 export default class Contact extends React.Component {
     render() {
         return (
             <Layout>
-                <Helmet title={`Contact – ${config.siteTitle}`}/>
-                <SEO/>
                 <div className="container lg:mt-20 lg:mb-20">
                     <h1 className="font-bold text-5xl mb-4">Get in touch</h1>
                     <p className="mt-2 mb-6">You may contact me via email or connect with me around the web.</p>
