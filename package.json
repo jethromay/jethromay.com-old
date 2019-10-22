@@ -1,13 +1,9 @@
 {
   "name": "jethromay.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
+  "private": true,
+  "description": "Personal website running on Gatsby, Node & React.",
+  "version": "0.1.0",
+  "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.6.5",
@@ -16,13 +12,18 @@
     "postcss-preset-env": "^6.7.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-github-btn": "^1.0.6",
     "tailwindcss": "^1.1.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [
     "next",
     "blog"
   ],
-  "author": "Jethro May <hello@jethromay.com>",
   "license": "MIT",
   "repository": {
     "type": "git",

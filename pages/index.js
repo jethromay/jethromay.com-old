@@ -3,7 +3,7 @@ import config from "../config/website"
 import Layout from "../components/layout"
 // import Articles from "../components/articles"
 // import Projects from "../components/projects"
-// import GitHubButton from "react-github-btn"
+import GitHubButton from "react-github-btn"
 // import Newsletter from "../components/newsletter";
 
 export default class Index extends React.Component {
