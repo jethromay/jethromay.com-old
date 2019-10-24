@@ -2,7 +2,7 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import config from "../config/website"
-import "../styles/style.css"
+import "../styles/main.css"
 
 export default class Layout extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from "react"
 import Link from 'next/link';
-import project from "../static/tailwind-screenshot.jpg";
+// import project from "../static/tailwind-screenshot.jpg";
 
 export default class Projects extends React.Component {
     render() {
@@ -11,7 +11,7 @@ export default class Projects extends React.Component {
                         <Link className="project-link block relative"
                               to="/">
                             <img className="project absolute block rounded-t md:shadow-lg-dark"
-                                 src={project} alt="Tailwind CSS"
+                                 src="" alt="Tailwind CSS"
                             />
                         </Link>
                     </div>

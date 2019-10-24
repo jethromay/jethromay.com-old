@@ -1,13 +1,13 @@
 import React from "react"
 import Link from 'next/link';
 import config from '../config/website'
-import kofi from '../static/ko-fi.png'
+// import kofi from '../static/ko-fi.png'
 
 export default class Header extends React.Component {
 
     state = {
         scrolled: false
-    }
+    };
 
     componentDidMount() {
         window.addEventListener('scroll', this.headerOnScroll);
@@ -23,10 +23,10 @@ export default class Header extends React.Component {
         } else {
             this.setState({scrolled: false})
         }
-    }
+    };
 
     render() {
-        const { scrolled } = this.state
+        const { scrolled } = this.state;
 
         return (
             <header id="header"
@@ -78,7 +78,7 @@ export default class Header extends React.Component {
                                    rel="noopener noreferrer"
                                    aria-label="Buy me a coffee on Kofi!"
                                    title="Buy me a coffee on Kofi!">
-                                    <img src={kofi} alt="Buy me a coffee on Kofi!"/>
+                                    <img src="" alt="Buy me a coffee on Kofi!"/>
                                 </a>
                             </li>
                         </ul>
