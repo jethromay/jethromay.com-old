@@ -1,7 +1,7 @@
 import React from "react"
 import Link from 'next/link';
 import config from '../config/website'
-// import kofi from '../static/ko-fi.png'
+// import kofi from '../public/ko-fi.png'
 
 export default class Header extends React.Component {
 

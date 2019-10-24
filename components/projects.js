@@ -1,6 +1,6 @@
 import React from "react"
 import Link from 'next/link';
-// import project from "../static/tailwind-screenshot.jpg";
+// import project from "../public/tailwind-screenshot.jpg";
 
 export default class Projects extends React.Component {
     render() {
