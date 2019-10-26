@@ -1,5 +1,4 @@
 import React from "react"
-import config from "../config/website"
 import Layout from "../components/layout"
 
 export default class About extends React.Component {
