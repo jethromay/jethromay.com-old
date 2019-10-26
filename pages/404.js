@@ -1,6 +1,5 @@
 import React from "react"
-import config from '../config/website'
-import Layout from "../layout/layout"
+import Layout from "../components/layout"
 
 export default class NotFoundPage extends React.Component {
     render() {
