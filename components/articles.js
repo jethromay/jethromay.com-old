@@ -6,9 +6,10 @@ export default class Articles extends React.Component {
         return (
             <article className="mb-8">
                 <header>
-                    <Link to="/article"
-                          className="text-lg text-black font-bold no-underline hover:underline">
-                        Website Overhaul
+                    <Link href="#">
+                        <a href="#" className="text-lg text-black font-bold no-underline hover:underline">
+                            Website Overhaul
+                        </a>
                     </Link>
                 </header>
                 <p className="text-grey-darkest text-base leading-normal mt-1">
@@ -17,9 +18,10 @@ export default class Articles extends React.Component {
                     functionality that my new site gave me.
                 </p>
                 <footer className="text-grey-darkest text-base leading-normal mt-2">
-                    <Link to="/article"
-                          className="text-grey-darker hover:text-black text-sm no-underline hover:underline">Read
-                        this article →
+                    <Link href="#" >
+                        <a className="text-grey-darker hover:text-black text-sm no-underline hover:underline">
+                            Read this article →
+                        </a>
                     </Link>
                 </footer>
             </article>

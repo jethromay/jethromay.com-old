@@ -1,9 +1,7 @@
 import React from "react"
-import config from "../config/website"
 import Layout from "../components/layout"
 import Articles from "../components/articles"
 import Projects from "../components/projects"
-// import GitHubButton from "react-github-btn"
 import Newsletter from "../components/newsletter";
 
 export default class Index extends React.Component {
@@ -21,14 +19,6 @@ export default class Index extends React.Component {
                                data-show-screen-name="false">
                                 Follow
                             </a>
-                            {/*<GitHubButton*/}
-                            {/*    href="https://github.com/jethromay"*/}
-                            {/*    data-size="large"*/}
-                            {/*    data-show-count="true"*/}
-                            {/*    aria-label="Follow @jethromay on GitHub"*/}
-                            {/*>*/}
-                            {/*    Follow*/}
-                            {/*</GitHubButton>*/}
                         </div>
                     </div>
                 </div>

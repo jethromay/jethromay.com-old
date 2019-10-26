@@ -1,6 +1,5 @@
 import React from "react"
 import Link from 'next/link';
-// import project from "../public/tailwind-screenshot.jpg";
 
 export default class Projects extends React.Component {
     render() {
@@ -8,11 +7,12 @@ export default class Projects extends React.Component {
             <div className="bg-blue-600 overflow-hidden shadow rounded">
                 <div className="md:flex">
                     <div className="md:w-1/2 md:pt-16 md:pr-0 md:pl-12">
-                        <Link className="project-link block relative"
-                              to="/">
-                            <img className="project absolute block rounded-t md:shadow-lg-dark"
-                                 src="" alt="Tailwind CSS"
-                            />
+                        <Link href="#">
+                            <a href="#" className="project-link block relative">
+                                <img className="project absolute block rounded-t md:shadow-lg-dark"
+                                     src="" alt="Tailwind CSS"
+                                />
+                            </a>
                         </Link>
                     </div>
                     <div className="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">

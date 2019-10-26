@@ -1,7 +1,6 @@
 import React from "react"
 import Link from 'next/link';
 import config from '../config/website'
-// import kofi from '../public/ko-fi.png'
 
 export default class Header extends React.Component {
 
@@ -34,13 +33,15 @@ export default class Header extends React.Component {
                 <nav className="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-0">
                     <div
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
-                        <Link className="flex text-black font-bold no-underline hover:no-underline" to="/">
-                            <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path
-                                    d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 6.7 8.7L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z">
-                                </path>
-                            </svg>
-                            <span>{config.siteTitle}</span>
+                        <Link href="#">
+                            <a className="flex text-black font-bold no-underline hover:no-underline">
+                                <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                    <path
+                                        d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 6.7 8.7L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z">
+                                    </path>
+                                </svg>
+                                <span>{config.siteTitle}</span>
+                            </a>
                         </Link>
 
                         <div className="block lg:hidden">
@@ -60,16 +61,24 @@ export default class Header extends React.Component {
                          id="nav-content">
                         <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                             <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
-                                <Link to="/" activeClassName="active" className="hover:underline">Home</Link>
+                                <Link href="#">
+                                    <a className="hover:underline">Home</a>
+                                </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link to="/about" activeClassName="active" className="hover:underline">About</Link>
+                                <Link href="#">
+                                    <a className="hover:underline">About</a>
+                                </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link to="/articles" activeClassName="active" className="hover:underline">Articles</Link>
+                                <Link href="#">
+                                    <a className="hover:underline">Articles</a>
+                                </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link to="/contact" activeClassName="active" className="hover:underline">Contact</Link>
+                                <Link href="#">
+                                    <a className="hover:underline">Contact</a>
+                                </Link>
                             </li>
                             <li className="lg:ml-3 xs:py-1 sm:py-3">
                                 <a href='https://ko-fi.com/jethromay'
@@ -78,7 +87,7 @@ export default class Header extends React.Component {
                                    rel="noopener noreferrer"
                                    aria-label="Buy me a coffee on Kofi!"
                                    title="Buy me a coffee on Kofi!">
-                                    <img src="" alt="Buy me a coffee on Kofi!"/>
+                                    <img src="/img/ko-fi.png" alt="Buy me a coffee on Kofi!"/>
                                 </a>
                             </li>
                         </ul>

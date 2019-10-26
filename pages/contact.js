@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import config from "../config/website"
-import Layout from "../src/layout/layout"
+import Layout from "../components/layout"
 
 export default class Contact extends React.Component {
     render() {
