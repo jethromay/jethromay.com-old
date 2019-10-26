@@ -8,7 +8,7 @@ export default class Layout extends React.Component {
 
     render() {
 
-        const { children } = this.props
+        const { children } = props.children
 
         return (
             <div className="flex flex-col min-h-full">
