@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 860px;
+    }
+}
+
+p {
+    margin-top: 0.5rem;
+}
+
+.ko-fi img {
+    width: 35px;
+}
+
+.twitter-follow-button {
+    margin-right: 0.5rem;
+}
+
+.project-link {
+    padding-top: 60%;
+}
+
+.project {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.active {
+    font-weight: bold;
+}
+
+@tailwind utilities;

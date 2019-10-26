@@ -1,16 +1,14 @@
 # jethromay.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/84398e24-39de-45d5-bab1-284176cf67cc/deploy-status)](https://app.netlify.com/sites/fervent-booth-91b3de/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 
-My personal website built with Gatsby, Node & React. 
+My personal website built with Next.js & React. 
 
 While my project is open source, i encourage you not to copy or reuse the code in this repository. This repository exists to showcase what i have learnt during my career as a web developer with the hope that it will benefit others.
 
 ## Built With
 
-* [Gatsby](https://www.gatsbyjs.org) 
-* [Node](https://nodejs.org/en/) 
+* [Next.js](https://nextjs.org/) 
 * [React](https://reactjs.org/)
 * [Tailwind](https://tailwindcss.com/)
 
@@ -21,6 +19,8 @@ Feel free to submit a pull request if you notice anything that needs to be addre
 ## Author
 
 * [Jethro May](https://jethromay.com)
+
+<a href="https://www.buymeacoffee.com/Px9T5qY6j" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## License
 

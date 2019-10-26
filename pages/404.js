@@ -1,0 +1,14 @@
+import React from "react"
+import config from '../config/website'
+import Layout from "../layout/layout"
+
+export default class NotFoundPage extends React.Component {
+    render() {
+        return (
+            <Layout>
+                <h1>Not Found</h1>
+                <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+            </Layout>
+        )
+    }
+}
