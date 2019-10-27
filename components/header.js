@@ -33,7 +33,7 @@ export default class Header extends React.Component {
                 <nav className="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-0">
                     <div
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
-                        <Link href="#">
+                        <Link href="/">
                             <a className="flex text-black font-bold no-underline hover:no-underline">
                                 <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                                     <path
@@ -61,22 +61,22 @@ export default class Header extends React.Component {
                          id="nav-content">
                         <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                             <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
-                                <Link href="#">
+                                <Link href="/">
                                     <a className="hover:underline">Home</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="#">
+                                <Link href="/about">
                                     <a className="hover:underline">About</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="#">
+                                <Link href="/articles">
                                     <a className="hover:underline">Articles</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="#">
+                                <Link href="/contact">
                                     <a className="hover:underline">Contact</a>
                                 </Link>
                             </li>

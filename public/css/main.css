@@ -30,6 +30,10 @@ p {
     bottom: 0;
 }
 
+.scroll {
+    border-bottom: 2px solid #edf2f7 !important;
+}
+
 .active {
     font-weight: bold;
 }

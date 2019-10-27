@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Articles from "../components/articles"
-import Projects from "../components/projects"
-import Newsletter from "../components/newsletter";
+import Project from "../components/project"
+import Newsletter from "../components/newsletter"
 
 export default class Index extends React.Component {
     render() {
@@ -35,7 +35,7 @@ export default class Index extends React.Component {
                 <section className="mt-8 mb-16">
                     <div className="container mx-auto">
                         <h2 className="font-bold text-3xl mb-6 text-left">Featured Projects</h2>
-                        <Projects />
+                        <Project />
                     </div>
                 </section>
 
