@@ -1,7 +1,7 @@
 {
   "name": "jethromay.com",
   "private": true,
-  "description": "Personal website running on Gatsby, Node & React.",
+  "description": "Personal website running on Next.js & React.",
   "version": "0.1.0",
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
