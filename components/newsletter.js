@@ -1,7 +1,12 @@
 import React from "react"
 
 export default class Newsletter extends React.Component {
+
     render() {
+
+        const url =
+            "https://jster.us7.list-manage.com/subscribe/post?u=ed40c0084a0c5ba31b3365d65&id=ec6f32bf5e";
+
         return (
             <aside className="mt-10 mb-10">
                 <div className="container mx-auto bg-gray-200 py-6 px-6 rounded">
