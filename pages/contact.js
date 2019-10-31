@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 export default class Contact extends React.Component {
     render() {
         return (
-            <Layout>
+            <div>
                 <div className="container lg:mt-20 lg:mb-20">
                     <h1 className="font-bold text-5xl mb-4">Get in touch</h1>
                     <p className="mt-2 mb-6">You may contact me via email or connect with me around the web.</p>
@@ -31,7 +31,7 @@ export default class Contact extends React.Component {
                         </li>
                     </ul>
                 </div>
-            </Layout>
+            </div>
         )
     }
 }
