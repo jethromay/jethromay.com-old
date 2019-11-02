@@ -1,8 +1,9 @@
-import React from "react"
-import Layout from "../components/layout"
-import Articles from "../components/articles"
-import Project from "../components/project"
-import Newsletter from "../components/newsletter"
+import React from "react";
+import Articles from "../components/articles";
+import Project from "../components/project";
+import Newsletter from "../components/newsletter";
+import MainLayout from '../components/layouts/main';
+import {Main} from "next/document";
 
 export default class Index extends React.Component {
     render() {
@@ -46,3 +47,5 @@ export default class Index extends React.Component {
         )
     }
 }
+
+Index.Layout = MainLayout;
