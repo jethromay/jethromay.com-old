@@ -1,6 +1,6 @@
 import React from "react"
 import Link from 'next/link';
-import config from '../config/website'
+import config from '../config/config.js'
 
 export default class Header extends React.Component {
 
