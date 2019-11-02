@@ -1,16 +1,20 @@
 import React from 'react'
 import App from 'next/app'
 import '../public/css/main.css'
-import Layout from "../components/layout";
+import MainLayout from "../components/layouts/main";
+import ArticleLayout from "../components/layouts/article";
 
 class MyApp extends App {
     render() {
-        const { Component, pageProps } = this.props
+        const { Component, pageProps } = this.props;
+        const Layout = Component.Layout || ArticleLayout;
 
         return (
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <MainLayout>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </MainLayout>
         )
     }
 }
