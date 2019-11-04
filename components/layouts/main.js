@@ -9,10 +9,6 @@ export default function Layout({meta, children}) {
         <div>
             <Head>
                 <title>{`${config.siteTitle} - Web Developer & Writer`}</title>
-                <meta
-                    type="description"
-                    content={`${config.siteDescription}`}
-                />
             </Head>
             <div className="flex flex-col min-h-full">
                 <Header />
