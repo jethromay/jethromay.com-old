@@ -20,7 +20,7 @@ Feel free to submit a pull request if you notice anything that needs to be addre
 
 * [Jethro May](https://jethromay.com)
 
-<a href="https://www.buymeacoffee.com/Px9T5qY6j" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K0Z32Y)
 
 ## License
 
