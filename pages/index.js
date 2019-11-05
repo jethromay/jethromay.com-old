@@ -4,10 +4,6 @@ import Project from "../components/project";
 import Newsletter from "../components/newsletter";
 import MainLayout from '../components/layouts/main';
 
-export const meta = {
-    title: 'Client-side setup'
-};
-
 export default class Index extends React.Component {
     render() {
         return (
