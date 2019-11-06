@@ -1,5 +1,6 @@
 import React from 'react'
 import App, { Container } from "next/app";
+import {MDXProvider} from '@mdx-js/react'
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import '../public/css/main.css';
@@ -7,14 +8,19 @@ import '../public/css/main.css';
 export default class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
-        const Layout = Component.Layout || ArticleLayout;
 
         return (
-            <MainLayout>
-                <Layout>
+        Component.isIndexPage
+            ? (
+                <MainLayout>
                     <Component {...pageProps} />
-                </Layout>
-            </MainLayout>
+                </MainLayout>
+            )
+            : (
+                <ArticleLayout>
+                    <Component {...pageProps} />
+                </ArticleLayout>
+            )
         )
     }
 }

@@ -2,9 +2,9 @@ import React from "react";
 import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
-import MainLayout from '../components/layouts/main';
 
 export default class Index extends React.Component {
+    static isIndexPage = true;
     render() {
         return (
             <div>
