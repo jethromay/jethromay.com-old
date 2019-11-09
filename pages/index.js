@@ -1,7 +1,7 @@
-import React from "react";
 import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
+import { TwitterFollowButton } from 'react-twitter-embed';
 
 export default class Index extends React.Component {
     static isIndexPage = true;
@@ -13,12 +13,9 @@ export default class Index extends React.Component {
                         <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
                         <p className="mb-4">I am a web developer & writer with a passion for Laravel.</p>
                         <div className="social flex">
-                            <a className="twitter-follow-button"
-                               href="https://twitter.com/may_jethro"
-                               data-size="large"
-                               data-show-screen-name="false">
-                                Follow
-                            </a>
+                            <TwitterFollowButton
+                                screenName={'may_jethro'}
+                                options={{ size: 'large' }} />
                         </div>
                     </div>
                 </div>
@@ -41,8 +38,6 @@ export default class Index extends React.Component {
 
                 <Newsletter />
             </div>
-
-
         )
     }
 }

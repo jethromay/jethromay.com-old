@@ -1,4 +1,3 @@
-import React from "react";
 import Head from 'next/head';
 import Header from "../header";
 import Footer from "../footer";
@@ -9,6 +8,10 @@ export default function Layout({meta, children}) {
         <div>
             <Head>
                 <title>{`${config.siteTitle} - Web Developer & Writer`}</title>
+                <meta
+                    type="description"
+                    content={`${config.siteDescription}`}
+                />
             </Head>
             <div className="flex flex-col min-h-full">
                 <Header />
