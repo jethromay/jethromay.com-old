@@ -34,11 +34,11 @@ export default class Header extends React.Component {
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
                         <Link href="/">
                             <a className="flex text-black font-bold no-underline hover:no-underline">
-                                <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                    <path
-                                        d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 6.7 8.7L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z">
-                                    </path>
-                                </svg>
+                                {/*<svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24">*/}
+                                {/*    <path*/}
+                                {/*        d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 6.7 8.7L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z">*/}
+                                {/*    </path>*/}
+                                {/*</svg>*/}
                                 <span>{config.siteTitle}</span>
                             </a>
                         </Link>
