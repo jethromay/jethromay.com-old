@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 
+header nav a span {
+    font-size: 18px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+}
+
 h1 {
     @apply font-bold text-5xl mb-4;
 }
@@ -16,8 +24,16 @@ h2 {
 }
 
 p {
-    margin-top: 0.5rem;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 1.5rem;
 }
+
+p:not(:last-child) {
+    margin-bottom: 1.5rem
+}
+
+@tailwind utilities;
 
 .ko-fi img {
     width: 35px;
@@ -46,4 +62,6 @@ p {
     font-weight: bold;
 }
 
-@tailwind utilities;
+.subscribe p:first-of-type {
+    margin-bottom: 0;
+}

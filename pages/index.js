@@ -11,7 +11,7 @@ export default class Index extends React.Component {
                 <div className="intro lg:pt-20 lg:pb-10 mb-10">
                     <div className="flex flex-col">
                         <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
-                        <p className="mb-4">I am a web developer & writer with a passion for Laravel.</p>
+                        <p className="mt-0 mb-4">I am a web developer & writer with a passion for Laravel.</p>
                         <div className="social flex">
                             <TwitterFollowButton
                                 screenName={'may_jethro'}

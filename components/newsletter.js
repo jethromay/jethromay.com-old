@@ -6,11 +6,11 @@ export default class Newsletter extends React.Component {
             "https://jster.us7.list-manage.com/subscribe/post?u=ed40c0084a0c5ba31b3365d65&id=ec6f32bf5e";
 
         return (
-            <aside className="mt-10 mb-10">
+            <aside className="subscribe mt-10 mb-10">
                 <div className="container mx-auto bg-gray-200 py-6 px-6 rounded">
-                    <p className="mt-2">Want to stay up to date with the latest content? Join my mailing list to receive updates.
+                    <p className="text-base mt-2">Want to stay up to date with the latest content? Join my mailing list to receive updates.
                         Unsubscribe when ever.</p>
-                    <p className="mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
+                    <p className="text-base mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
 
                     <form className="w-full mb-2">
                         <label className="block hidden" htmlFor="email">

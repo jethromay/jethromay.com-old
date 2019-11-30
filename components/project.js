@@ -21,7 +21,7 @@ export default class Project extends React.Component {
                             </div>
                             <div className="mt-2 md:mt-3 text-white antialiased text-sm md:text-md leading-tight md:leading-normal opacity-75">
                                 I wanted to redesign my website and give it a much needed face lift as well
-                                as create a platform where i can share the knowledge i learn throughout my
+                                as create a platform where i could share the knowledge i have learnt throughout my
                                 career.
                             </div>
                         </div>
