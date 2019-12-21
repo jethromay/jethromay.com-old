@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MAILCHIMP_URL": "@mailchimp-url"
+  }
+}
