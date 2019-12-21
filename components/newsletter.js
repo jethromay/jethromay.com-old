@@ -4,8 +4,6 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 export default class Newsletter extends React.Component {
     render() {
 
-        const url = "https://jethromay.us20.list-manage.com/subscribe/post?u=075a71226c8233de41f22f06b&amp;id=9fae1f7a02";
-
         const emailRef = createRef(undefined);
 
         return (
@@ -15,7 +13,7 @@ export default class Newsletter extends React.Component {
                         Unsubscribe when ever.</p>
                     <p className="text-base mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
                     <MailchimpSubscribe
-                        url={url}
+                        url={process.env.MAILCHIMP_URL}
                         render={({ subscribe, status, message }) => {
                             switch (status) {
                                 case "sending":

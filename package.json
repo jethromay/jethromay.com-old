@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/jethromay/jethromay.com/issues"
   },
-  "homepage": "https://github.com/jethromay/jethromay.com#readme"
+  "homepage": "https://github.com/jethromay/jethromay.com#readme",
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
