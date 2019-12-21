@@ -13,7 +13,7 @@ export default class Newsletter extends React.Component {
                         Unsubscribe when ever.</p>
                     <p className="text-base mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
                     <MailchimpSubscribe
-                        url={process.env.MAILCHIMP_URL}
+                        url={JSON.stringify(process.env.MAILCHIMP_URL)}
                         render={({ subscribe, status, message }) => {
                             switch (status) {
                                 case "sending":
