@@ -1,3 +1,4 @@
+import React  from "react"
 import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
@@ -22,7 +23,7 @@ export default class Index extends React.Component {
 
                 <section className="mt-8 mb-10">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-6 text-left">Latest Articles</h2>
+                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Articles</h2>
                         <Articles />
                     </div>
                 </section>
@@ -31,7 +32,7 @@ export default class Index extends React.Component {
 
                 <section className="mt-8 mb-16">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-6 text-left">Featured Projects</h2>
+                        <h2 className="font-bold text-3xl mb-8 text-left">Featured Projects</h2>
                         <Project />
                     </div>
                 </section>

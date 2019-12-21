@@ -1,9 +1,10 @@
-export default class Newsletter extends React.Component {
+import React, { createRef } from "react"
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
+export default class Newsletter extends React.Component {
     render() {
 
-        const url =
-            "https://jster.us7.list-manage.com/subscribe/post?u=ed40c0084a0c5ba31b3365d65&id=ec6f32bf5e";
+        const emailRef = createRef(undefined);
 
         return (
             <aside className="subscribe mt-10 mb-10">
@@ -11,17 +12,37 @@ export default class Newsletter extends React.Component {
                     <p className="text-base mt-2">Want to stay up to date with the latest content? Join my mailing list to receive updates.
                         Unsubscribe when ever.</p>
                     <p className="text-base mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
-
-                    <form className="w-full mb-2">
-                        <label className="block hidden" htmlFor="email">
-                            Email Address
-                        </label>
-                        <input
-                            className="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500"
-                            type="email" name="email" id="email" placeholder="Email Address"/>
-
-                        <button className="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
-                    </form>
+                    <MailchimpSubscribe
+                        url={process.env.MAILCHIMP_URL}
+                        render={({ subscribe, status, message }) => {
+                            switch (status) {
+                                case "sending":
+                                    return <div>Sending...</div>;
+                                case "success":
+                                    return <div className="underline">Check your email to confirm your subscription.</div>;
+                                case "error":
+                                    return <div dangerouslySetInnerHTML={{ __html: message }} />;
+                                default:
+                                    return (
+                                        <form
+                                            className="w-full mb-2"
+                                            onSubmit={() => {
+                                                event.preventDefault();
+                                                subscribe({
+                                                    EMAIL: emailRef.current.value,
+                                                })
+                                            }}
+                                        >
+                                            <label className="block hidden" htmlFor="email">
+                                                Email Address
+                                            </label>
+                                            <input className="mb-3 p-2 mr-2 border-b-2 appearance-none rounded focus:bg-white focus:outline-none focus:border-blue-500" type="email" name="email" id="email" placeholder="Email Address" ref={emailRef} />
+                                            <button className="bg-blue-500 hover:bg-blue-400 text-white p-2 rounded" type="submit">Subscribe</button>
+                                        </form>
+                                    )
+                            }
+                        }}
+                    />
                 </div>
             </aside>
         )

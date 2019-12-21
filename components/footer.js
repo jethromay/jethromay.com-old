@@ -1,7 +1,7 @@
 export default class Footer extends React.Component {
     render() {
         return (
-            <footer className="flex-none pt-10 pb-10 pr-5 pl-5">
+            <footer className="flex-shrink-0 pt-10 pb-10 pr-5 pl-5">
                 <div className="flex items-center justify-center">
                     <span className="text-gray-500">© {new Date().getFullYear()}</span>
                 </div>
