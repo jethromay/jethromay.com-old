@@ -1,4 +1,9 @@
 {
+  "build": {
+    "env": {
+      "MAILCHIMP_URL": "@mailchimp-url"
+    }
+  },
   "env": {
     "MAILCHIMP_URL": "@mailchimp-url"
   }
