@@ -1,3 +1,4 @@
+import React  from "react"
 import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
