@@ -1,3 +1,7 @@
+export const meta = {
+    title: 'About',
+};
+
 export default class Articles extends React.Component {
     render() {
         return (

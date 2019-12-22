@@ -19,7 +19,7 @@ export default class Newsletter extends React.Component {
                                 case "sending":
                                     return <div>Sending...</div>;
                                 case "success":
-                                    return <div className="underline">Check your email to confirm your subscription.</div>;
+                                    return <div>Check your email to confirm your subscription.</div>;
                                 case "error":
                                     return <div dangerouslySetInnerHTML={{ __html: message }} />;
                                 default:

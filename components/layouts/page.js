@@ -1,8 +1,8 @@
-import config from "../../config/config";
+import React from "react";
 import Header from "../header";
 import Footer from "../footer";
 
-export default function ArticleLayout({meta, children}) {
+export default function PageLayout({meta, children}) {
     return (
         <div className="flex flex-col min-h-full">
             <Header />

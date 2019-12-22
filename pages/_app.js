@@ -2,7 +2,7 @@ import React from 'react'
 import App, { Container } from "next/app";
 import {MDXProvider} from '@mdx-js/react'
 import MainLayout from "../components/layouts/main";
-import ArticleLayout from "../components/layouts/article";
+import PageLayout from "../components/layouts/page";
 import '../public/css/main.css';
 
 export default class MyApp extends App {
@@ -17,9 +17,9 @@ export default class MyApp extends App {
                 </MainLayout>
             )
             : (
-                <ArticleLayout>
+                <PageLayout>
                     <Component {...pageProps} />
-                </ArticleLayout>
+                </PageLayout>
             )
         )
     }
