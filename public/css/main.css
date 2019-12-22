@@ -79,3 +79,7 @@ p:not(:last-child) {
 .subscribe p:first-of-type {
     margin-bottom: 0;
 }
+
+.active {
+    display: block;
+}
