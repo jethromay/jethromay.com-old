@@ -1,4 +1,4 @@
-import React  from "react"
+import React  from "react";
 import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
@@ -6,6 +6,7 @@ import { TwitterFollowButton } from 'react-twitter-embed';
 
 export default class Index extends React.Component {
     static isIndexPage = true;
+
     render() {
         return (
             <div>
