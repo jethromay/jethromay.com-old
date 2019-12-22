@@ -77,9 +77,9 @@ p:not(:last-child) {
 }
 
 .subscribe p:first-of-type {
-    margin-bottom: 0;
+    @apply mb-0
 }
 
 .active {
-    display: block;
+    @apply block
 }
