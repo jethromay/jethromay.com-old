@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from './activeLink';
 import config from '../config/config.js'
 
 export default class Header extends React.Component {
@@ -62,22 +62,22 @@ export default class Header extends React.Component {
                          id="nav-content">
                         <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                             <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
-                                <Link href="/">
+                                <Link activeClassName="active" href="/">
                                     <a className="hover:underline">Home</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="/about">
+                                <Link activeClassName="active" href="/about">
                                     <a className="hover:underline">About</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="/articles">
+                                <Link activeClassName="active" href="/articles">
                                     <a className="hover:underline">Articles</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link href="/contact">
+                                <Link activeClassName="active" href="/contact">
                                     <a className="hover:underline">Contact</a>
                                 </Link>
                             </li>
