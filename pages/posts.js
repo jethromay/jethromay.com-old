@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import posts from '../posts.json'
 
-export default class Articles extends React.Component {
+export default class Posts extends React.Component {
     render() {
         return (
             <div className="container lg:mt-20 lg:mb-20">

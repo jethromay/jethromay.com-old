@@ -75,7 +75,7 @@ export default class Header extends React.Component {
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
                                 <Link activeClassName="active" href="/posts">
-                                    <a className="hover:underline">Articles</a>
+                                    <a className="hover:underline">Posts</a>
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
@@ -110,7 +110,7 @@ export default class Header extends React.Component {
                         </li>
                         <li>
                             <Link href="/posts">
-                                <a className=" font-normal">Articles</a>
+                                <a className=" font-normal">Posts</a>
                             </Link>
                         </li>
                         <li className="">

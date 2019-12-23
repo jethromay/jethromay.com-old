@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default class Articles extends React.Component {
+export default class Posts extends React.Component {
     render() {
         return (
                 <article className="mb-8">

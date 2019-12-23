@@ -25,7 +25,7 @@ export default class Index extends React.Component {
 
                 <section className="mt-8 mb-10">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Articles</h2>
+                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Posts</h2>
                         <ul>
                             {posts
                                 .slice(0, 4)
@@ -54,7 +54,7 @@ export default class Index extends React.Component {
 
                 <section className="mt-8 mb-16">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-8 text-left">Featured Projects</h2>
+                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Projects</h2>
                         <Project />
                     </div>
                 </section>
