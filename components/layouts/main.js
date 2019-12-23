@@ -2,7 +2,7 @@ import React from "react";
 import Head from 'next/head';
 import Header from "../header";
 import Footer from "../footer";
-import config from "../../config/config";
+import config from "../../site.config";
 
 export default function Layout({meta, children}) {
     return (

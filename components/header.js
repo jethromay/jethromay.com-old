@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from './activeLink';
 import Router from 'next/router';
-import config from '../config/config.js'
+import config from '../site.config';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -74,7 +74,7 @@ export default class Header extends React.Component {
                                 </Link>
                             </li>
                             <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
-                                <Link activeClassName="active" href="/articles">
+                                <Link activeClassName="active" href="/posts">
                                     <a className="hover:underline">Articles</a>
                                 </Link>
                             </li>
@@ -109,7 +109,7 @@ export default class Header extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/articles">
+                            <Link href="/posts">
                                 <a className=" font-normal">Articles</a>
                             </Link>
                         </li>

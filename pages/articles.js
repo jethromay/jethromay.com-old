@@ -10,7 +10,7 @@ export default class Articles extends React.Component {
                 {Object.entries(posts).map((value, index) => {
                     return (
                         <li key={index}>
-                            <Link href='/articles/[id]' as={'/articles/' + value[0]}>
+                            <Link href='/posts/[id]' as={'/articles/' + value[0]}>
                                 <a>{value[1].title}</a>
                             </Link>
                         </li>
