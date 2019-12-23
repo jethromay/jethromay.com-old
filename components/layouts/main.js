@@ -10,7 +10,7 @@ export default function Layout({meta, children}) {
             <Head>
                 <title>{`${config.siteTitle} - Web Developer & Writer`}</title>
                 <meta
-                    type="description"
+                    name="description"
                     content={`${config.siteDescription}`}
                 />
             </Head>
