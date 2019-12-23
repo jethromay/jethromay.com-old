@@ -1,8 +1,9 @@
 import React  from "react";
-import Articles from "../components/articles";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
 import { TwitterFollowButton } from 'react-twitter-embed';
+import Link from "next/link";
+import posts from '../posts.json'
 
 export default class Index extends React.Component {
     static isIndexPage = true;
@@ -25,7 +26,27 @@ export default class Index extends React.Component {
                 <section className="mt-8 mb-10">
                     <div className="container mx-auto">
                         <h2 className="font-bold text-3xl mb-8 text-left">Latest Articles</h2>
-                        <Articles />
+                        <ul>
+                            {Object.entries(posts).map((value, index) => {
+                                return (
+                                    <li className="mb-8" key={index}>
+                                        <Link href='/articles/[id]' as={'/articles/' + value[0]}>
+                                            <a className="text-lg text-black font-bold no-underline hover:underline">{value[1].title}</a>
+                                        </Link>
+                                        <p className="text-grey-darkest text-base leading-normal mt-1">
+                                            {value[1].content}
+                                        </p>
+                                        <div className="text-grey-darkest text-base leading-normal mt-2">
+                                            <Link href='/articles/[id]' as={'/articles/' + value[0]}>
+                                                <a className="text-grey-darker hover:text-black text-sm no-underline hover:underline">
+                                                    Read this article →
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </li>
+                                )
+                            })}
+                        </ul>
                     </div>
                 </section>
 

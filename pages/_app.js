@@ -1,6 +1,5 @@
 import React from 'react'
 import App, { Container } from "next/app";
-import {MDXProvider} from '@mdx-js/react'
 import MainLayout from "../components/layouts/main";
 import PageLayout from "../components/layouts/page";
 import '../public/css/main.css';
