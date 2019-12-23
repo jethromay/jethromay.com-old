@@ -18,7 +18,7 @@ export default function Post({ path, meta, children }) {
                 <header>
                     <h1 className="p-name">{meta.title}</h1>
                     <div>
-                        <PublishedAt date={meta.publishedAt} link={path} />
+                        {/*<PublishedAt date={meta.publishedAt} link={path} />*/}
 
                         <Link href="/about">
                             <a
@@ -33,26 +33,26 @@ export default function Post({ path, meta, children }) {
                     </div>
                 </header>
                 <div className="e-content">{children}</div>
-                <footer>
-                    {(previousPost || nextPost) && (
-                        <div className="post-pagination">
-                            {previousPost && (
-                                <Pagination
-                                    title={previousPost.title}
-                                    path={previousPost.path}
-                                    position="previous"
-                                />
-                            )}
-                            {nextPost && (
-                                <Pagination
-                                    title={nextPost.title}
-                                    path={nextPost.path}
-                                    position="next"
-                                />
-                            )}
-                        </div>
-                    )}
-                </footer>
+                {/*<footer>*/}
+                {/*    {(previousPost || nextPost) && (*/}
+                {/*        <div className="post-pagination">*/}
+                {/*            {previousPost && (*/}
+                {/*                <Pagination*/}
+                {/*                    title={previousPost.title}*/}
+                {/*                    path={previousPost.path}*/}
+                {/*                    position="previous"*/}
+                {/*                />*/}
+                {/*            )}*/}
+                {/*            {nextPost && (*/}
+                {/*                <Pagination*/}
+                {/*                    title={nextPost.title}*/}
+                {/*                    path={nextPost.path}*/}
+                {/*                    position="next"*/}
+                {/*                />*/}
+                {/*            )}*/}
+                {/*        </div>*/}
+                {/*    )}*/}
+                {/*</footer>*/}
             </article>
         </Layout>
     )
