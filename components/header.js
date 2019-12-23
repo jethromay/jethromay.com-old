@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from './activeLink';
+import Router from 'next/router';
 import config from '../config/config.js'
 
 export default class Header extends React.Component {
@@ -8,7 +9,7 @@ export default class Header extends React.Component {
         this.state = {
             scrolled: false,
             isOpen: false
-        }
+        };
     }
 
     componentDidMount() {
@@ -27,15 +28,11 @@ export default class Header extends React.Component {
         }
     };
 
-    onToggle = () => {
-        this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-    };
-
     render() {
         return (
             <header id="header"
                     className={`${ this.state.scrolled ? `scroll` : `` } w-full bg-white lg:p-5 xs:border-2 xs:border-gray-200 sm:border-2 sm:border-gray-200 md:border-2 md:border-gray-200 lg:border-0 fixed top-0 z-50`}>
-                <div className="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:border-b xs:px-4 sm:px-4 md:px-4 lg:px-0">
+                <div className="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-0">
                     <div
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
                         <Link href="/">
@@ -45,16 +42,21 @@ export default class Header extends React.Component {
                         </Link>
 
                         <div className="block lg:hidden">
-                            <button onClick={this.onToggle}
-                                    id="nav-toggle"
-                                    className="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-grey-lightest hover:border-blue-300 appearance-none focus:outline-none">
-                                <svg className="inline fill-current text-gray-500 h-3 w-3" viewBox="0 0 20 20"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <title>Menu</title>
-                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">
-                                    </path>
-                                </svg>
-                            </button>
+                            <ul>
+                                <li>
+
+                                </li>
+                                <li className="">
+                                    <a href='https://ko-fi.com/jethromay'
+                                       className="ko-fi"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="Buy me a coffee on Kofi!"
+                                       title="Buy me a coffee on Kofi!">
+                                        <img src="/img/ko-fi.png" alt="Buy me a coffee on Kofi!"/>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -94,26 +96,26 @@ export default class Header extends React.Component {
                         </ul>
                     </nav>
                 </div>
-                <nav className={`${ this.state.isOpen ? `active` : ``} hidden px-4`}>
-                    <ul className="sm:flex sm:items-center">
-                        <li className="pt-3">
+                <nav className="py-3 px-4 lg:hidden xl:hidden">
+                    <ul className="flex items-center justify-between">
+                        <li className="">
                             <Link href="/">
-                                <a className="block font-normal py-1">Home</a>
+                                <a className=" font-normal">Home</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/about">
+                                <a className=" font-normal">About</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/articles">
+                                <a className=" font-normal">Articles</a>
                             </Link>
                         </li>
                         <li className="">
-                            <Link href="/">
-                                <a className="block font-normal py-1">About</a>
-                            </Link>
-                        </li>
-                        <li className="">
-                            <Link href="/">
-                                <a className="block font-normal py-1">Articles</a>
-                            </Link>
-                        </li>
-                        <li className="pb-3">
-                            <Link href="/">
-                                <a className="block font-normal py-1">Contact</a>
+                            <Link href="/contact">
+                                <a className=" font-normal">Contact</a>
                             </Link>
                         </li>
                     </ul>

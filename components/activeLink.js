@@ -1,18 +1,14 @@
-import React, { Children } from 'react';
-import { withRouter } from 'next/router';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-const ActiveLink = ({ router, children, ...props }) => {
-    const child = Children.only(children);
+export default ({ href, children }) => {
+    const router = useRouter();
 
-    let className = child.props.className || '';
-    if (router.pathname === props.href && props.activeClassName) {
-        className = `${className} ${props.activeClassName}`.trim();
+    let className = children.props.className || '';
+    if (router.pathname === href) {
+        className = `${className} active`
     }
 
-    delete props.activeClassName;
-
-    return <Link {...props}>{React.cloneElement(child, { className })}</Link>;
-};
-
-export default withRouter(ActiveLink);
+    return <Link href={href}>{React.cloneElement(children, { className })}</Link>
+}
