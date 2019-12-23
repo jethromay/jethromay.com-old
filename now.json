@@ -6,8 +6,5 @@
   },
   "env": {
     "MAILCHIMP_URL": "@mailchimp-url"
-  },
-  "routes": [
-    { "src": "/posts/(?<page>[^/]+)$", "dest": "/posts?page=$page" }
-  ]
+  }
 }

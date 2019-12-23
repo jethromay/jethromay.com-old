@@ -27,10 +27,6 @@ export default class Header extends React.Component {
         }
     };
 
-    static async getInitialProps({ path, pageTitle, ogImage }) {
-        return { path, pageTitle, ogImage }
-    }
-
     render() {
         return (
             <header id="header"
