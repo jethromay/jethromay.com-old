@@ -13,25 +13,26 @@ export default function Post({ path, meta, children }) {
     // const nextPost = posts[currentPostIndex - 1];
 
     return (
-        <Layout pageTitle={meta.title} ogImage={meta.image}>
+        <Layout>
+            {/*pageTitle={meta.title} ogImage={meta.image}*/}
             <article className="h-entry">
-                <header>
-                    <h1 className="p-name">{meta.title}</h1>
-                    <div>
-                        {/*<PublishedAt date={meta.publishedAt} link={path} />*/}
+                {/*<header>*/}
+                {/*    <h1 className="p-name">{meta.title}</h1>*/}
+                {/*    <div>*/}
+                {/*        /!*<PublishedAt date={meta.publishedAt} link={path} />*!/*/}
 
-                        <Link href="/about">
-                            <a
-                                color="#aaa"
-                                rel="author"
-                                className="p-author h-card"
-                                href="/about"
-                            >
-                                {siteMeta.siteAuthor}
-                            </a>
-                        </Link>
-                    </div>
-                </header>
+                {/*        <Link href="/about">*/}
+                {/*            <a*/}
+                {/*                color="#aaa"*/}
+                {/*                rel="author"*/}
+                {/*                className="p-author h-card"*/}
+                {/*                href="/about"*/}
+                {/*            >*/}
+                {/*                {siteMeta.siteAuthor}*/}
+                {/*            </a>*/}
+                {/*        </Link>*/}
+                {/*    </div>*/}
+                {/*</header>*/}
                 <div className="e-content">{children}</div>
                 {/*<footer>*/}
                 {/*    {(previousPost || nextPost) && (*/}
