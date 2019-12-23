@@ -5,12 +5,12 @@ import PublishedAt from '../utils/published-at'
 import posts from '../../posts/index'
 import Pagination from '../pagination';
 
-function Post({ path, meta, children }) {
-    const currentPostIndex = posts
-        .map(({ title }) => title)
-        .indexOf(meta.title);
-    const previousPost = posts[currentPostIndex + 1];
-    const nextPost = posts[currentPostIndex - 1];
+export default function Post({ path, meta, children }) {
+    // const currentPostIndex = posts
+    //     .map(({ title }) => title)
+    //     .indexOf(meta.title);
+    // const previousPost = posts[currentPostIndex + 1];
+    // const nextPost = posts[currentPostIndex - 1];
 
     return (
         <Layout pageTitle={meta.title} ogImage={meta.image}>
@@ -57,5 +57,3 @@ function Post({ path, meta, children }) {
         </Layout>
     )
 }
-
-export default Post
