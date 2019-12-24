@@ -3,7 +3,7 @@ import Header from "../header";
 import Footer from "../footer";
 import Meta from "../meta";
 
-export default function Page({ props, children }) {
+export default function Post({ props, children }) {
     return (
         <div className="flex flex-col min-h-full">
             <Header />
@@ -16,4 +16,3 @@ export default function Page({ props, children }) {
         </div>
     )
 }
-
