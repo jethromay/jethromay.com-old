@@ -3,8 +3,8 @@ import Layout from "../components/layouts/default";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
 import PostList from "../components/postList";
-import matter from 'gray-matter'
-import { TwitterFollowButton } from 'react-twitter-embed';
+import matter from "gray-matter";
+import { TwitterFollowButton } from "react-twitter-embed";
 
 const Index = (props) => {
     return (

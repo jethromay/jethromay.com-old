@@ -15,11 +15,11 @@ const PostList = (props) => {
 
     return (
         <>
-            {props.allPosts.map(post => (
-                <article>
+            {props.allPosts.map((post) => (
+                <article key={post.slug}>
                     <header>
                         <h1 className="text-2xl mb-0">
-                            <Link key={post.slug} href={{ pathname: `/posts/${post.slug}` }}>
+                            <Link href={{ pathname: `/posts/${post.slug}` }}>
                                 <a>
                                     {post.document.data.title}
                                 </a>
@@ -27,11 +27,9 @@ const PostList = (props) => {
                         </h1>
                         <time className="text-gray-600">{reformatDate(post.document.data.date)}</time>
                     </header>
-                    <p>
-                        <ReactMarkdown source={truncateSummary(post.document.content)} />
-                    </p>
+                    <ReactMarkdown source={truncateSummary(post.document.content)} />
                     <footer>
-                        <Link key={post.slug} href={{ pathname: `/posts/${post.slug}` }}>
+                        <Link href={{ pathname: `/posts/${post.slug}` }}>
                             <a className="underline text-blue-600">
                                 Read more
                             </a>
