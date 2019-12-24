@@ -77,7 +77,7 @@ p:not(:last-child) {
 }
 
 .active {
-    @apply font-bold
+    @apply text-gray-800
 }
 
 .subscribe p:first-of-type {

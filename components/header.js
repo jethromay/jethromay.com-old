@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from './activeLink';
-import { siteMeta } from '../site.config';
+import config from '../site.config';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -36,7 +36,7 @@ export default class Header extends React.Component {
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
                         <Link href="/">
                             <a className="flex text-black font-bold no-underline hover:no-underline">
-                                <span>{siteMeta.siteTitle}</span>
+                                <span>{config.siteTitle}</span>
                             </a>
                         </Link>
 
@@ -64,22 +64,22 @@ export default class Header extends React.Component {
                             <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                                 <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
                                     <Link activeClassName="active" href="/">
-                                        <a className="hover:underline">Home</a>
+                                        <a className="text-gray-600 hover:underline">Home</a>
                                     </Link>
                                 </li>
                                 <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
                                     <Link activeClassName="active" href="/about">
-                                        <a className="hover:underline">About</a>
+                                        <a className="text-gray-600 hover:underline">About</a>
                                     </Link>
                                 </li>
                                 <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
                                     <Link activeClassName="active" href="/posts">
-                                        <a className="hover:underline">Posts</a>
+                                        <a className="text-gray-600 hover:underline">Posts</a>
                                     </Link>
                                 </li>
                                 <li className="lg:mr-3 lg:ml-3 xs:py-1 sm:py-3">
                                     <Link activeClassName="active" href="/contact">
-                                        <a className="hover:underline">Contact</a>
+                                        <a className="text-gray-600 hover:underline">Contact</a>
                                     </Link>
                                 </li>
                                 <li className="lg:ml-3 xs:py-1 sm:py-3">
@@ -99,22 +99,22 @@ export default class Header extends React.Component {
                         <ul className="flex items-center justify-between">
                             <li className="">
                                 <Link href="/">
-                                    <a className=" font-normal">Home</a>
+                                    <a className="text-gray-600 font-normal">Home</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/about">
-                                    <a className=" font-normal">About</a>
+                                    <a className="text-gray-600 font-normal">About</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/posts">
-                                    <a className=" font-normal">Posts</a>
+                                    <a className="text-gray-600 font-normal">Posts</a>
                                 </Link>
                             </li>
                             <li className="">
                                 <Link href="/contact">
-                                    <a className=" font-normal">Contact</a>
+                                    <a className="text-gray-600 font-normal">Contact</a>
                                 </Link>
                             </li>
                         </ul>
