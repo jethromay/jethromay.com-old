@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "../header";
+import Meta from "../meta";
 import Footer from "../footer";
 
-export default function Layout({ path, children, pageTitle, ogImage }) {
+export default function Layout(props) {
     return (
         <div className="flex flex-col min-h-full">
-            <Header path={path} pageTitle={pageTitle} ogImage={ogImage} />
+            <Meta siteTitle={props.siteTitle} siteDescription={props.siteDescription} />
+            <Header siteTitle={props.siteTitle} />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
-                {children}
+                {props.children}
             </main>
             <Footer />
         </div>

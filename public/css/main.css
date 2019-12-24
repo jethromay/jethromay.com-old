@@ -65,19 +65,12 @@ p:not(:last-child) {
     padding-top: 60%;
 }
 
-.project {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 .scroll {
     border-bottom: 2px solid #edf2f7 !important;
 }
 
 .active {
-    @apply font-bold
+    @apply text-gray-800
 }
 
 .subscribe p:first-of-type {
@@ -86,4 +79,12 @@ p:not(:last-child) {
 
 .active {
     @apply block
+}
+
+#latest-posts article {
+    @apply mt-8
+}
+
+#posts article {
+    @apply mt-8
 }

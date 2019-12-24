@@ -2,12 +2,13 @@ import React  from "react";
 import Layout from "../components/layouts/default";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
+import PostList from "../components/postList";
+import matter from 'gray-matter'
 import { TwitterFollowButton } from 'react-twitter-embed';
-import Link from "next/link";
 
-export default function Index({pageTitle}) {
+const Index = (props) => {
     return (
-        <Layout>
+        <Layout pathname="/" siteTitle={props.siteTitle} siteDescription={props.siteDescription}>
             <div className="intro lg:pt-20 lg:pb-10 mb-10">
                 <div className="flex flex-col">
                     <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
@@ -20,30 +21,10 @@ export default function Index({pageTitle}) {
                 </div>
             </div>
 
-            <section className="mt-8 mb-10">
+            <section className="mt-8 mb-10" id="latest-posts">
                 <div className="container mx-auto">
                     <h2 className="font-bold text-3xl mb-8 text-left">Latest Posts</h2>
-                    <ul>
-                        {/*{posts*/}
-                        {/*    .slice(0, 4)*/}
-                        {/*    .map((post, index) => (*/}
-                        {/*        <li className="mb-8" key={index}>*/}
-                        {/*            <Link href={post.path} as={post.path}>*/}
-                        {/*                <a className="text-lg text-black font-bold no-underline hover:underline">{post.title}</a>*/}
-                        {/*            </Link>*/}
-                        {/*            <p className="text-grey-darkest text-base leading-normal mt-1">*/}
-                        {/*                {post.summary}*/}
-                        {/*            </p>*/}
-                        {/*            <div className="text-grey-darkest text-base leading-normal mt-2">*/}
-                        {/*                <Link href={post.path} as={post.path}>*/}
-                        {/*                    <a className="text-grey-darker hover:text-black text-sm no-underline hover:underline">*/}
-                        {/*                        Read article →*/}
-                        {/*                    </a>*/}
-                        {/*                </Link>*/}
-                        {/*            </div>*/}
-                        {/*        </li>*/}
-                        {/*    ))}*/}
-                    </ul>
+                    <PostList allPosts={props.allPosts}/>
                 </div>
             </section>
 
@@ -59,4 +40,36 @@ export default function Index({pageTitle}) {
             <Newsletter />
         </Layout>
     )
-}
+};
+
+export default Index;
+
+Index.getInitialProps = async function() {
+    const siteConfig = await import(`../site.config`);
+    //get posts & context from folder
+    const posts = (context => {
+        const keys = context.keys();
+        const values = keys.map(context);
+        const data = keys.map((key, index) => {
+            // Create slug from filename
+            const slug = key
+                .replace(/^.*[\\\/]/, "")
+                .split(".")
+                .slice(0, -1)
+                .join(".");
+            const value = values[index];
+            // Parse yaml metadata & markdownbody in document
+            const document = matter(value.default);
+            return {
+                document,
+                slug
+            };
+        });
+        return data;
+    })(require.context("../posts", true, /\.md$/));
+
+    return {
+        allPosts: posts,
+        ...siteConfig,
+    }
+};

@@ -1,31 +1,48 @@
 import React from 'react';
-import Link from "next/link";
+import Layout from "../components/layouts/page";
+import matter from 'gray-matter';
+import PostList from "../components/postList";
 
-export default function Posts({ path, pageTitle, ogImage }) {
+const Posts = (props) => {
     return (
-            <div className="container lg:mt-20 lg:mb-20">
+        <Layout>
+            <div className="container lg:mt-20 lg:mb-20" id="posts">
                 <h1 className="font-bold text-5xl mb-4">Posts</h1>
                 <p>A collection of the various posts i have written.</p>
-                <ul>
-                    {/*{posts*/}
-                    {/*    .map((post, index) => (*/}
-                    {/*        <li className="mb-8" key={index}>*/}
-                    {/*            <Link href={post.path} as={post.path}>*/}
-                    {/*                <a className="text-lg text-black font-bold no-underline hover:underline">{post.title}</a>*/}
-                    {/*            </Link>*/}
-                    {/*            <p className="text-grey-darkest text-base leading-normal mt-1">*/}
-                    {/*                {post.summary}*/}
-                    {/*            </p>*/}
-                    {/*            <div className="text-grey-darkest text-base leading-normal mt-2">*/}
-                    {/*                <Link href={post.path} as={post.path}>*/}
-                    {/*                    <a className="text-grey-darker hover:text-black text-sm no-underline hover:underline">*/}
-                    {/*                        Read article →*/}
-                    {/*                    </a>*/}
-                    {/*                </Link>*/}
-                    {/*            </div>*/}
-                    {/*        </li>*/}
-                    {/*    ))}*/}
-                </ul>
+                <PostList allPosts={props.allPosts}/>
             </div>
+        </Layout>
     )
-}
+};
+
+export default Posts;
+
+Posts.getInitialProps = async function() {
+    const siteConfig = await import(`../site.config`);
+    //get posts & context from folder
+    const posts = (context => {
+        const keys = context.keys();
+        const values = keys.map(context);
+        const data = keys.map((key, index) => {
+            // Create slug from filename
+            const slug = key
+                .replace(/^.*[\\\/]/, "")
+                .split(".")
+                .slice(0, -1)
+                .join(".");
+            const value = values[index];
+            // Parse yaml metadata & markdownbody in document
+            const document = matter(value.default);
+            return {
+                document,
+                slug
+            };
+        });
+        return data;
+    })(require.context("../posts", true, /\.md$/));
+
+    return {
+        allPosts: posts,
+        ...siteConfig,
+    }
+};
