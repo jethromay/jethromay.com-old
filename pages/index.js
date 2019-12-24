@@ -21,7 +21,7 @@ const Index = (props) => {
                 </div>
             </div>
 
-            <section className="mt-8 mb-10">
+            <section className="mt-8 mb-10" id="latest-posts">
                 <div className="container mx-auto">
                     <h2 className="font-bold text-3xl mb-8 text-left">Latest Posts</h2>
                     <PostList allPosts={props.allPosts}/>

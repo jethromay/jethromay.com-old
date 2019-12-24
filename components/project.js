@@ -8,7 +8,7 @@ export default class Project extends React.Component {
                     <div className="md:w-1/2 md:pt-16 md:pr-0 md:pl-12">
                         <Link href="#">
                             <a href="#" className="project-link block relative">
-                                <img className="project absolute block rounded-t md:shadow-lg-dark"
+                                <img className="absolute inset-0 block rounded-t md:shadow-lg-dark"
                                      src="/img/tailwind-screenshot.jpg" alt="Tailwind CSS"
                                 />
                             </a>

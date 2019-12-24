@@ -30,7 +30,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <header id="header"
-                    className={`${ this.state.scrolled ? `scroll` : `` } w-full bg-white lg:p-5 xs:border-2 xs:border-gray-200 sm:border-2 sm:border-gray-200 md:border-2 md:border-gray-200 lg:border-0 fixed top-0 z-50`}>
+                    className={`${ this.state.scrolled ? `scroll` : `` } w-full bg-white lg:p-2 xs:border-2 xs:border-gray-200 sm:border-2 sm:border-gray-200 md:border-2 md:border-gray-200 lg:border-0 fixed top-0 z-50`}>
                 <div className="w-full container mx-auto flex flex-wrap items-center mt-0 py-3 xs:px-4 sm:px-4 md:px-4 lg:px-0">
                     <div
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">

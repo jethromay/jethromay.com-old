@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 const PostList = (props) => {
 
     function truncateSummary(content) {
-        return content.slice(0, 200).trimEnd();
+        return content.slice(0, 150).trimEnd();
     }
 
     function reformatDate(fullDate) {
@@ -17,17 +17,26 @@ const PostList = (props) => {
         <>
             {props.allPosts.map(post => (
                 <article>
-                    <h1 className="text-2xl">
-                        <Link key={post.slug} href={{ pathname: `/posts/${post.slug}` }}>
-                            <a>
-                            {post.document.data.title}
-                            </a>
-                        </Link>
-                    </h1>
-                    <time>{reformatDate(post.document.data.date)}</time>
+                    <header>
+                        <h1 className="text-2xl mb-0">
+                            <Link key={post.slug} href={{ pathname: `/posts/${post.slug}` }}>
+                                <a>
+                                    {post.document.data.title}
+                                </a>
+                            </Link>
+                        </h1>
+                        <time className="text-gray-600">{reformatDate(post.document.data.date)}</time>
+                    </header>
                     <p>
                         <ReactMarkdown source={truncateSummary(post.document.content)} />
                     </p>
+                    <footer>
+                        <Link key={post.slug} href={{ pathname: `/posts/${post.slug}` }}>
+                            <a className="underline text-blue-600">
+                                Read more
+                            </a>
+                        </Link>
+                    </footer>
                 </article>
             ))}
         </>

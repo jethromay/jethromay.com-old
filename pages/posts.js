@@ -6,7 +6,7 @@ import PostList from "../components/postList";
 const Posts = (props) => {
     return (
         <Layout>
-            <div className="container lg:mt-20 lg:mb-20">
+            <div className="container lg:mt-20 lg:mb-20" id="posts">
                 <h1 className="font-bold text-5xl mb-4">Posts</h1>
                 <p>A collection of the various posts i have written.</p>
                 <PostList allPosts={props.allPosts}/>
