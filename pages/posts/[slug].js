@@ -30,7 +30,6 @@ export default function PostTemplate(props) {
                 <h1>{frontmatter.title}</h1>
                 <p>{reformatDate(frontmatter.date)}</p>
                 <a
-                    className="twitter-link"
                     href={twitterShare}
                     target="_blank"
                     rel="noopener noreferrer">
