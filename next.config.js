@@ -6,9 +6,6 @@ const glob = require('glob');
 module.exports = withCSS(
     withMDX({
         pageExtensions: ['js', 'jsx', 'mdx'],
-        options: {
-            hastPlugins: [require("mdx-prism")]
-        },
         env: {
             MAILCHIMP_URL: process.env.MAILCHIMP_URL,
         },
