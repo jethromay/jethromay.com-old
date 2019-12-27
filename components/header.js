@@ -42,9 +42,6 @@ export default class Header extends React.Component {
 
                             <div className="block lg:hidden">
                                 <ul>
-                                    <li>
-
-                                    </li>
                                     <li className="">
                                         <a href='https://ko-fi.com/jethromay'
                                            className="ko-fi"
@@ -60,7 +57,7 @@ export default class Header extends React.Component {
                         </div>
 
                         <nav className="w-full flex-grow xs:hidden sm:hidden lg:flex lg:items-center lg:w-1/2 lg:block mt-2 lg:mt-0"
-                             id="nav-content">
+                             id="nav-content" role="navigation" aria-label="main navigation">
                             <ul className="lg:flex flex-1 items-center lg:justify-end md:px-0 py-2">
                                 <li className="lg:mr-3 lg:ml-3 lg:invisible xs:pb-1">
                                     <Link activeClassName="active" href="/">
@@ -95,7 +92,7 @@ export default class Header extends React.Component {
                             </ul>
                         </nav>
                     </div>
-                    <nav className="py-3 px-4 lg:hidden xl:hidden">
+                    <nav className="py-3 px-4 lg:hidden xl:hidden" role="navigation">
                         <ul className="flex items-center justify-between">
                             <li className="">
                                 <Link href="/">
