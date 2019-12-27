@@ -7,7 +7,9 @@ import matter from "gray-matter";
 
 const Index = (props) => {
     return (
-        <Layout pathname="/" siteTitle={props.siteTitle} siteDescription={props.siteDescription}>
+        <Layout
+            siteTitle={props.siteTitle + ` - Web Developer & Writer`}
+            siteDescription={props.siteDescription}>
             <div className="intro lg:pt-20 lg:pb-10 mb-10">
                 <div className="flex flex-col">
                     <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>

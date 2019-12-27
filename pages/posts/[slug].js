@@ -2,6 +2,7 @@ import * as React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import PostLayout from "../../components/layouts/post";
+import Newsletter from "../../components/newsletter";
 import config from '../../site.config';
 
 export default function PostTemplate(props) {
@@ -25,7 +26,7 @@ export default function PostTemplate(props) {
     }/${convertToSlug(frontmatter.title)}/&via=may_jethro`;
 
     return (
-        <PostLayout siteTitle={props.siteTitle}>
+        <PostLayout siteTitle={frontmatter.title} siteDescription={frontmatter.description}>
             <header>
                 <h1>{frontmatter.title}</h1>
                 <p>{reformatDate(frontmatter.date)}</p>
@@ -37,12 +38,8 @@ export default function PostTemplate(props) {
                 </a>
             </header>
             <ReactMarkdown source={markdownBody} />
-            <footer>
-                Written By: {frontmatter.author}
-            </footer>
         </PostLayout>
     );
-
 }
 
 PostTemplate.getInitialProps = async function(ctx) {
