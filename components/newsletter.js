@@ -11,7 +11,7 @@ export default class Newsletter extends React.Component {
                 <div className="container mx-auto bg-gray-200 py-6 px-6 rounded">
                     <p className="text-base mt-2">Want to stay up to date with the latest content? Join my mailing list to receive updates.
                         Unsubscribe when ever.</p>
-                    <p className="text-base mt-2 mb-5"><span className="underline">No spam, I promise.</span></p>
+                    <p className="text-base mt-2 mb-5"><span className="font-bold">No spam, I promise.</span></p>
                     <MailchimpSubscribe
                         url={mailchimpURL}
                         render={({ subscribe, status, message }) => {
