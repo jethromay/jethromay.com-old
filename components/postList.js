@@ -40,7 +40,7 @@ const PostList = (props) => {
                     <ReactMarkdown source={truncateSummary(post.document.content)} />
                     <footer>
                         <Link href={{ pathname: `/posts/${post.slug}` }}>
-                            <a className="underline text-blue-600">
+                            <a className="underline text-blue-400 hover:text-blue-500">
                                 Read more
                             </a>
                         </Link>
