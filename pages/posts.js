@@ -1,7 +1,7 @@
 import React from "react";
 import matter from "gray-matter";
 import Layout from "../components/layouts/default";
-import PostList from "../components/postList";
+import PostList from "../components/post-list";
 
 const Posts = (props) => {
     return (

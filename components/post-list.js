@@ -5,10 +5,6 @@ import moment from "moment";
 
 const PostList = (props) => {
 
-    function truncateSummary(content) {
-        return content.slice(0, 150).trimEnd();
-    }
-
     function reformatDate(fullDate) {
         const date = new Date(fullDate);
         return date.toDateString().slice(4);
@@ -37,7 +33,7 @@ const PostList = (props) => {
                         </div>
                         <time className="text-gray-600">{reformatDate(post.document.data.date)}</time>
                     </header>
-                    <ReactMarkdown source={truncateSummary(post.document.content)} />
+                    <ReactMarkdown source={post.document.data.description} />
                     <footer>
                         <Link href={{ pathname: `/posts/${post.slug}` }}>
                             <a className="underline text-blue-400 hover:text-blue-500">

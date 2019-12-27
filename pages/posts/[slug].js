@@ -2,7 +2,6 @@ import * as React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import PostLayout from "../../components/layouts/post";
-import Newsletter from "../../components/newsletter";
 import config from '../../site.config';
 
 export default function PostTemplate(props) {
@@ -31,7 +30,7 @@ export default function PostTemplate(props) {
                 <h1 className="mb-0">{frontmatter.title}</h1>
                 <div className="flex items-center text-gray-600">
                     <time className="text-gray-600 mr-2">{reformatDate(frontmatter.date)}</time> |
-                    <a className="font-bold text-gray-600 ml-2 hover:text-blue-500g"
+                    <a className="font-bold text-gray-600 ml-2 hover:text-blue-500"
                         href={twitterShare}
                         target="_blank"
                         rel="noopener noreferrer">

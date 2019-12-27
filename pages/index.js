@@ -2,7 +2,7 @@ import React  from "react";
 import Layout from "../components/layouts/default";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
-import PostList from "../components/postList";
+import PostList from "../components/post-list";
 import matter from "gray-matter";
 
 const Index = (props) => {
