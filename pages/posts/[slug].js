@@ -28,14 +28,16 @@ export default function PostTemplate(props) {
     return (
         <PostLayout siteTitle={frontmatter.title} siteDescription={frontmatter.description}>
             <header>
-                <h1>{frontmatter.title}</h1>
-                <p>{reformatDate(frontmatter.date)}</p>
-                <a
-                    href={twitterShare}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Share
-                </a>
+                <h1 className="mb-0">{frontmatter.title}</h1>
+                <div className="flex items-center text-gray-600">
+                    <time className="text-gray-600 mr-2">{reformatDate(frontmatter.date)}</time> |
+                    <a className="font-bold text-gray-600 ml-2 hover:text-blue-500g"
+                        href={twitterShare}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Share
+                    </a>
+                </div>
             </header>
             <ReactMarkdown source={markdownBody} />
         </PostLayout>

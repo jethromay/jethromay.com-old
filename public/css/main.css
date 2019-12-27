@@ -47,6 +47,10 @@ p {
     margin-top: 1.5rem;
 }
 
+ul:not(:last-child) {
+    @apply mb-6 list-disc mt-4 pl-4
+}
+
 p:not(:last-child) {
     margin-bottom: 1.5rem
 }
