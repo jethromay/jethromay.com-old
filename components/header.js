@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from './activeLink';
+import Link from './active-link';
 import config from '../site.config';
 
 export default class Header extends React.Component {
