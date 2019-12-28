@@ -9,6 +9,8 @@ export default function Meta(props) {
                 <title>{props.siteTitle}</title>
                 <meta name="description" content={props.siteDescription} />
 
+                <link rel="icon" href="/favicon.ico" />
+
                 <meta property="og:title" content={props.siteTitle} />
                 <meta property="og:description" content={props.siteDescription} />
                 <meta property="og:image" content="https://jethromay.com/img/me.jpg" />
