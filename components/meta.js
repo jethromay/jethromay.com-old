@@ -18,21 +18,6 @@ export default function Meta(props) {
                 <meta name="twitter:title" content={props.siteTitle} />
                 <meta name="twitter:description" content={props.siteDescription} />
                 <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
-
-                <script
-                    async
-                    src={`https://www.googletagmanager.com/gtag/js?id=UA-131802537-1`}
-                />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-131802537-1');
-          `,
-                    }}
-                />
             </Head>
         </>
     )
