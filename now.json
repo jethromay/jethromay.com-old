@@ -1,10 +1,12 @@
 {
   "build": {
     "env": {
-      "MAILCHIMP_URL": "@mailchimp-url"
+      "MAILCHIMP_URL": "@mailchimp-url",
+      "GOOGLE_ANALYTICS_ID": "@google-analytics-id"
     }
   },
   "env": {
-    "MAILCHIMP_URL": "@mailchimp-url"
+    "MAILCHIMP_URL": "@mailchimp-url",
+    "GOOGLE_ANALYTICS_ID": "@google-analytics-id"
   }
 }
