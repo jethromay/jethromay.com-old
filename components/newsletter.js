@@ -1,5 +1,6 @@
 import React, { createRef } from "react"
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import * as gtag from '../lib/gtag';
 
 export default class Newsletter extends React.Component {
     render() {
@@ -30,6 +31,12 @@ export default class Newsletter extends React.Component {
                                                 event.preventDefault();
                                                 subscribe({
                                                     EMAIL: emailRef.current.value,
+                                                });
+
+                                                gtag.event({
+                                                    action: 'subscribe_newsletter',
+                                                    category: 'engagement',
+                                                    label: 'Subscribed to newsletter',
                                                 })
                                             }}
                                         >
