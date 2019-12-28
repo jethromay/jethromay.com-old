@@ -26,6 +26,7 @@
     "react-github-btn": "^1.1.1",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-markdown": "^4.2.2",
+    "react-syntax-highlighter": "^12.2.1",
     "tailwindcss": "^1.1.4",
     "webpack": "^4.41.4"
   },
