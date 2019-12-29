@@ -2,7 +2,7 @@ import * as React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import PostLayout from "../../components/layouts/post";
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import Code from "../../components/code";
 import config from '../../site.config';
 
 export default function PostTemplate(props) {
@@ -39,7 +39,7 @@ export default function PostTemplate(props) {
                     </a>
                 </div>
             </header>
-            <ReactMarkdown source={markdownBody} />
+            <ReactMarkdown source={markdownBody} renderers={{ code: Code }} />
         </PostLayout>
     );
 }
