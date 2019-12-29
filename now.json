@@ -11,7 +11,6 @@
   },
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
-    { "src": "/feed.json", "dest": "/.next/static/feed.json" },
     { "src": "/posts/(?<page>[^/]+)$", "dest": "/posts?page=$page" }
   ]
 }
