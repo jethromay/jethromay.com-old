@@ -13,28 +13,22 @@
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-preval": "^4.0.0",
     "dotenv": "^8.2.0",
-    "gray-matter": "^4.0.2",
-    "isomorphic-unfetch": "^3.0.0",
-    "mdx-prism": "^0.3.1",
     "moment": "^2.24.0",
     "next": "^9.1.6",
-    "node-glob": "^1.2.0",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-github-btn": "^1.1.1",
-    "react-highlight": "^0.12.0",
     "react-mailchimp-subscribe": "^2.1.0",
-    "react-markdown": "^4.2.2",
     "react-syntax-highlighter": "^12.2.1",
-    "tailwindcss": "^1.1.4",
-    "webpack": "^4.41.4"
+    "tailwindcss": "^1.1.4"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build:rss": "node ./.next/serverless/posts/rss.js",
+    "now-build": "next build && npm build:rss"
   },
   "keywords": [
     "next",
