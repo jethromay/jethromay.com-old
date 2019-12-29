@@ -27,7 +27,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "build:rss": "node ./.next/server/posts/rss.js",
+    "build:rss": "node ./.next/serverless/posts/rss.js",
     "now-build": "next build && npm build:rss"
   },
   "keywords": [

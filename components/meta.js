@@ -15,7 +15,7 @@ export default function Meta(props) {
                     rel="alternate"
                     title="RSS Feed"
                     type="application/json"
-                    href={`${props.siteUrl}/feed.json`}
+                    href={`${config.siteUrl}/feed.json`}
                 />
 
                 <meta property="og:title" content={props.siteTitle} />
