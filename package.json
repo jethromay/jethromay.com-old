@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
+    "@mdx-js/loader": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
     "@next/mdx": "^9.1.6",
     "@zeit/next-css": "^1.0.1",
