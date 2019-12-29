@@ -4,7 +4,6 @@ const withMDX = require('@next/mdx')();
 
 module.exports = withCSS(
     withMDX({
-        target: 'serverless',
         pageExtensions: ['js', 'jsx', 'mdx'],
         env: {
             MAILCHIMP_URL: process.env.MAILCHIMP_URL,
