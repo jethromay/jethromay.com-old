@@ -3,13 +3,13 @@ import Layout from "../components/layouts/default";
 import Project from "../components/project";
 import Newsletter from "../components/newsletter";
 import PostList from "../components/post-list";
-import matter from "gray-matter";
+import config from "../site.config";
 
 const Index = (props) => {
     return (
         <Layout
-            siteTitle={props.siteTitle + ` - Web Developer & Writer`}
-            siteDescription={props.siteDescription}>
+            siteTitle={config.siteTitle + ` - Web Developer & Writer`}
+            siteDescription={config.siteDescription}>
             <div className="intro lg:pt-20 lg:pb-10 mb-10">
                 <div className="flex flex-col">
                     <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
@@ -40,7 +40,7 @@ const Index = (props) => {
             <section className="mt-8 mb-10" id="latest-posts">
                 <div className="container mx-auto">
                     <h2 className="font-bold text-3xl mb-8 text-left">Latest Posts</h2>
-                    <PostList allPosts={props.allPosts}/>
+                    <PostList />
                 </div>
             </section>
 
@@ -59,33 +59,3 @@ const Index = (props) => {
 };
 
 export default Index;
-
-Index.getInitialProps = async function() {
-    const siteConfig = await import(`../site.config`);
-    //get posts & context from folder
-    const posts = (context => {
-        const keys = context.keys();
-        const values = keys.map(context);
-        const data = keys.map((key, index) => {
-            // Create slug from filename
-            const slug = key
-                .replace(/^.*[\\\/]/, "")
-                .split(".")
-                .slice(0, -1)
-                .join(".");
-            const value = values[index];
-            // Parse yaml metadata & markdownbody in document
-            const document = matter(value.default);
-            return {
-                document,
-                slug
-            };
-        });
-        return data;
-    })(require.context("../posts", true, /\.md$/));
-
-    return {
-        allPosts: posts,
-        ...siteConfig,
-    }
-};

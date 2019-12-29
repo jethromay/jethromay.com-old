@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import moment from "moment";
+import posts from "../posts/index";
 
 const PostList = (props) => {
 
@@ -16,26 +16,26 @@ const PostList = (props) => {
 
     return (
         <>
-            {props.allPosts.map((post) => (
-                <article key={post.slug}>
+            {posts.map(post => (
+                <article key={post.title}>
                     <header>
                         <div className="flex items-center">
                             <h1 className="text-2xl mb-0 mr-3">
-                                <Link href={{ pathname: `/posts/${post.slug}` }}>
+                                <Link href={post.path}>
                                     <a>
-                                        {post.document.data.title}
+                                        {post.title}
                                     </a>
                                 </Link>
                             </h1>
-                            {latestPost(post.document.data.date) && (
+                            {latestPost(post.date) && (
                                 <span className="rounded-full bg-green-500 px-3 py-1 mt-1 uppercase text-xs text-white font-bold mr-3">New</span>
                             )}
                         </div>
-                        <time className="text-gray-600">{reformatDate(post.document.data.date)}</time>
+                        <time className="text-gray-600">{reformatDate(post.date)}</time>
                     </header>
-                    <ReactMarkdown source={post.document.data.description} />
+                    <p>{post.summary}</p>
                     <footer>
-                        <Link href={{ pathname: `/posts/${post.slug}` }}>
+                        <Link href={post.path}>
                             <a className="underline text-blue-400 hover:text-blue-500">
                                 Read more
                             </a>
