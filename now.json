@@ -1,4 +1,6 @@
 {
+  "version": 2,
+  "name": "jethromay.com",
   "build": {
     "env": {
       "MAILCHIMP_URL": "@mailchimp-url"
