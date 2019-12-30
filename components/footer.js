@@ -12,7 +12,6 @@ export default class Footer extends React.Component {
                     <a href="https://ko-fi.com/jethromay" className="text-gray-500 mr-2 ml-2 hover:text-blue-400" target="_blank" rel="noopener noreferrer">Ko-Fi</a>
                     <a href="https://github.com/jethromay" className="text-gray-500 mr-2 ml-2 hover:text-blue-400" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://twitter.com/may_jethro" className="text-gray-500 mr-2 ml-2 hover:text-blue-400" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href={`${config.siteUrl}/feed.json`} className="text-gray-500 mr-2 ml-2 hover:text-blue-400" target="_blank" rel="noopener noreferrer">RSS</a>
                 </div>
             </footer>
         )
