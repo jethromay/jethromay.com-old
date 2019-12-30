@@ -7,13 +7,11 @@ export default class Project extends React.Component {
             <div className="bg-blue-600 overflow-hidden shadow rounded">
                 <div className="md:flex">
                     <div className="md:w-1/2 md:pt-16 md:pr-0 md:pl-12">
-                        <Link href="#">
-                            <a href="https://github.com/jethromay/jethromay.com" className="project-link block relative">
-                                <img className="absolute inset-0 block rounded-t md:shadow-lg-dark"
-                                     src="/img/project-jethromay.jpg" alt="Tailwind CSS"
-                                />
-                            </a>
-                        </Link>
+                        <a href="https://github.com/jethromay/jethromay.com" className="project-link block relative">
+                            <img className="absolute inset-0 block rounded-t md:shadow-lg-dark"
+                                 src="/img/project-jethromay.jpg" alt="Tailwind CSS"
+                            />
+                        </a>
                     </div>
                     <div className="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">
                         <div>
