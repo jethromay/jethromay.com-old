@@ -11,13 +11,6 @@ export default function Meta(props) {
 
                 <link rel="icon" href="/favicon.ico" />
 
-                {/*<link*/}
-                {/*    rel="alternate"*/}
-                {/*    title="RSS Feed"*/}
-                {/*    type="application/json"*/}
-                {/*    href={`${config.siteUrl}/feed.json`}*/}
-                {/*/>*/}
-
                 <meta property="og:title" content={props.siteTitle} />
                 <meta property="og:description" content={props.siteDescription} />
                 <meta property="og:image" content="https://jethromay.com/img/me.jpg" />

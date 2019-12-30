@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../header";
 import Footer from "../footer";
 import Meta from "../meta";
-import config from '../../site.config'
+import config from '../../site.config';
+import { MDXProvider } from '@mdx-js/react';
+import MarkdownComponent from "../markdown-component";
 
 export default function Post({ meta, children }) {
 
@@ -42,7 +44,7 @@ export default function Post({ meta, children }) {
                             </a>
                         </div>
                     </header>
-                    {children}
+                    <MDXProvider components={MarkdownComponent} children={children} />
                 </article>
             </main>
             <Footer />
