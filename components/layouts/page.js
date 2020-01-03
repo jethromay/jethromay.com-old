@@ -1,26 +1,14 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import Meta from "../meta";
 import { NextSeo } from 'next-seo';
 import config from "../../site.config";
 
 export default function Page({meta, children}) {
-
-    function convertToLowerCase(title) {
-        return title
-            .toLowerCase()
-    }
-
     return (
         <div className="flex flex-col min-h-full">
-            {/*<Meta*/}
-            {/*    siteTitle={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}*/}
-            {/*    siteDescription={config.siteDescription}*/}
-            {/*    siteUrl={`${config.siteUrl}/${convertToLowerCase(meta.title)}`}*/}
-            {/*/>*/}
             <NextSeo
-                title={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}
+                title={`${meta.title} - Jethro May`}
                 description={config.siteDescription}
             />
             <Header />
