@@ -7,7 +7,8 @@ const Posts = (props) => {
     return (
         <Layout
             siteTitle={`Posts - ` + config.siteTitle}
-            siteDescription={config.siteDescription}>
+            siteDescription={config.siteDescription}
+            siteUrl={config.siteUrl + `/posts`}>
             <div className="container lg:mt-20 lg:mb-20" id="posts">
                 <h1 className="font-bold text-5xl mb-4">Posts</h1>
                 <PostList />
