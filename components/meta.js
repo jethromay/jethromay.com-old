@@ -14,6 +14,7 @@ export default function Meta(props) {
                 <meta property="og:title" content={props.siteTitle} />
                 <meta property="og:description" content={props.siteDescription} />
                 <meta property="og:image" content="https://jethromay.com/img/me.jpg" />
+                <meta property="og:url" content={props.siteUrl} />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content={config.twitterAccount} />

@@ -9,7 +9,8 @@ const Index = (props) => {
     return (
         <Layout
             siteTitle={config.siteTitle + ` - Web Developer & Writer`}
-            siteDescription={config.siteDescription}>
+            siteDescription={config.siteDescription}
+            siteUrl={config.siteUrl}>
             <div className="intro lg:pt-20 lg:pb-10 mb-10">
                 <div className="flex flex-col">
                     <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hi, I'm Jethro.</h1>
