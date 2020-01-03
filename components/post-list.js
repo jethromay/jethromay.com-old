@@ -3,7 +3,7 @@ import Link from "next/link";
 import moment from "moment";
 import posts from "../posts/index";
 
-const PostList = (props) => {
+const PostList = () => {
 
     function reformatDate(fullDate) {
         const date = new Date(fullDate);
