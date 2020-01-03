@@ -8,8 +8,6 @@ import { NextSeo } from 'next-seo';
 
 export default function Post({ meta, children }) {
 
-    console.log(meta);
-
     function convertToSlug(title) {
         return title
             .toLowerCase()
