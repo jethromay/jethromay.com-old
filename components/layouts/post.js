@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import Meta from "../meta";
 import config from '../../site.config';
 import { MDXProvider } from '@mdx-js/react';
 import MarkdownComponent from "../markdown-component";
@@ -29,11 +28,6 @@ export default function Post({ meta, children }) {
 
     return (
         <div className="flex flex-col min-h-full">
-            {/*<Meta*/}
-            {/*    siteTitle={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}*/}
-            {/*    siteDescription={meta.summary}*/}
-            {/*    siteUrl={twitterShare}*/}
-            {/*/>*/}
             <NextSeo
                 title={`${meta.title} - Jethro May`}
                 description={meta.summary}
@@ -41,6 +35,7 @@ export default function Post({ meta, children }) {
                     url: config.siteUrl + '/posts/' + convertToSlug(meta.title),
                     title: meta.title + ' - Jethro May',
                     description: meta.summary,
+                    type: 'article',
                     images: [{
                             url: config.siteUrl + '/img/me.jpg',
                             width: 800,
