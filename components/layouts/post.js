@@ -37,6 +37,11 @@ export default function Post({ meta, children }) {
             <NextSeo
                 title={`${meta.title} - Jethro May`}
                 description={meta.summary}
+                openGraph={{
+                    url: config.siteUrl + '/posts/ ' + convertToSlug(meta.title),
+                    title: meta.title + ' - Jethro May',
+                    description: meta.summary
+                }}
             />
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
