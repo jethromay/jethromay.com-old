@@ -9,6 +9,8 @@ import { NextSeo } from 'next-seo';
 
 export default function Post({ meta, children }) {
 
+    console.log(meta);
+
     function convertToSlug(title) {
         return title
             .toLowerCase()
@@ -33,7 +35,7 @@ export default function Post({ meta, children }) {
             {/*    siteUrl={twitterShare}*/}
             {/*/>*/}
             <NextSeo
-                title={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}
+                title={`${meta.title} - Jethro May`}
                 description={meta.summary}
             />
             <Header />
