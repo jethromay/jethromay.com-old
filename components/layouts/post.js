@@ -38,9 +38,15 @@ export default function Post({ meta, children }) {
                 title={`${meta.title} - Jethro May`}
                 description={meta.summary}
                 openGraph={{
-                    url: config.siteUrl + '/posts/ ' + convertToSlug(meta.title),
+                    url: config.siteUrl + '/posts/' + convertToSlug(meta.title),
                     title: meta.title + ' - Jethro May',
-                    description: meta.summary
+                    description: meta.summary,
+                    images: [{
+                            url: config.siteUrl + '/img/me.jpg',
+                            width: 800,
+                            height: 600,
+                            alt: 'Jethro May',
+                        }]
                 }}
             />
             <Header />
