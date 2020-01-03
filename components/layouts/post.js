@@ -22,7 +22,7 @@ export default function Post({ meta, children }) {
 
     const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(meta.title)}&url=${
         config.siteUrl
-    }/${convertToSlug(meta.title)}/&via=may_jethro`;
+    }/posts/${convertToSlug(meta.title)}/&via=may_jethro`;
 
     return (
         <div className="flex flex-col min-h-full">
