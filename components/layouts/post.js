@@ -5,6 +5,7 @@ import Meta from "../meta";
 import config from '../../site.config';
 import { MDXProvider } from '@mdx-js/react';
 import MarkdownComponent from "../markdown-component";
+import { NextSeo } from 'next-seo';
 
 export default function Post({ meta, children }) {
 
@@ -26,10 +27,14 @@ export default function Post({ meta, children }) {
 
     return (
         <div className="flex flex-col min-h-full">
-            <Meta
-                siteTitle={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}
-                siteDescription={meta.summary}
-                siteUrl={`${config.siteUrl}/posts/${convertToSlug(meta.title)}`}
+            {/*<Meta*/}
+            {/*    siteTitle={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}*/}
+            {/*    siteDescription={meta.summary}*/}
+            {/*    siteUrl={twitterShare}*/}
+            {/*/>*/}
+            <NextSeo
+                title={meta.title ? `${meta.title} - Jethro May` : `Jethro May - Web Developer & Writer`}
+                description={meta.summary}
             />
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
