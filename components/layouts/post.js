@@ -26,7 +26,8 @@ export default function PostLayout({meta, children}) {
     }/posts/${convertToSlug(meta.title)}/&via=may_jethro`;
 
     return (
-        <div className="flex flex-col min-h-full">
+        <Page title={`${meta.title} - Jethro May`}>
+            <Seo {...meta} />
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
                 <article className="md:mt-20 lg:mb-20">
@@ -43,14 +44,11 @@ export default function PostLayout({meta, children}) {
                         </div>
                     </header>
                     <MDXProvider components={MarkdownComponent}>
-                        <Page title={`${meta.title} - Jethro May`}>
-                            <Seo {...meta} />
-                        </Page>
                         {children}
                     </MDXProvider>
                 </article>
             </main>
             <Footer />
-        </div>
+        </Page>
     )
 }
