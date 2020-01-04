@@ -31,4 +31,4 @@ class PersonalSite extends Document {
     }
 }
 
-export default PersonalSiteg;
+export default PersonalSite;
