@@ -33,7 +33,7 @@ const PostList = () => {
                         </div>
                         <time className="text-gray-600">{reformatDate(post.date)}</time>
                     </header>
-                    <p>{post.summary}</p>
+                    <p>{post.description}</p>
                     <footer>
                         <Link href={post.path}>
                             <a className="underline text-blue-400 hover:text-blue-500">

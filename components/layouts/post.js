@@ -26,17 +26,6 @@ export default function Post({props, meta, children}) {
 
     return (
         <div className="flex flex-col min-h-full">
-            <Head>
-                <title>{`${meta.title} - Jethro May`}</title>
-                <meta name="description" content={meta.summary} />
-                <link rel="icon" href="/favicon.ico" />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:creator" content={config.twitterAccount} />
-                <meta name="twitter:title" content={config.siteTitle} />
-                <meta name="twitter:description" content={config.siteDescription} />
-                <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
-            </Head>
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
                 <article className="md:mt-20 lg:mb-20">
@@ -52,7 +41,23 @@ export default function Post({props, meta, children}) {
                             </a>
                         </div>
                     </header>
-                    <MDXProvider components={MarkdownComponent} children={children} />
+                    <MDXProvider components={MarkdownComponent}>
+                        <Head>
+                            <title>{`${meta.title} - Jethro May`}</title>
+                            <meta name="description" content={meta.description} />
+
+                            <meta name="og:title" content={meta.title} />
+                            <meta name="og:description" content={meta.description} />
+                            <meta name="og:image" content={`https://jethromay.com/img/me.jpg`} />
+
+                            <meta name="twitter:card" content="summary_large_image" />
+                            <meta name="twitter:creator" content={config.twitterAccount} />
+                            <meta name="twitter:title" content={config.siteTitle} />
+                            <meta name="twitter:description" content={config.siteDescription} />
+                            <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
+                        </Head>
+                        {children}
+                    </MDXProvider>
                 </article>
             </main>
             <Footer />
