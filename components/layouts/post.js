@@ -31,8 +31,8 @@ export default function Post({ meta, children }) {
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={config.twitterAccount} />
-            <meta name="twitter:title" content={props.siteTitle} />
-            <meta name="twitter:description" content={props.siteDescription} />
+            <meta name="twitter:title" content={config.siteTitle} />
+            <meta name="twitter:description" content={config.siteDescription} />
             <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
