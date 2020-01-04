@@ -4,7 +4,7 @@ import Footer from "../footer";
 import config from '../../site.config';
 import { MDXProvider } from '@mdx-js/react';
 import MarkdownComponent from "../markdown-component";
-import { NextSeo } from 'next-seo';
+import Meta from "../meta";
 
 export default function Post({ meta, children }) {
 
@@ -26,18 +26,9 @@ export default function Post({ meta, children }) {
 
     return (
         <div className="flex flex-col min-h-full">
-            <NextSeo
-                title={`${meta.title} - Jethro May`}
-                description={meta.summary}
-                openGraph={{
-                    url: config.siteUrl + '/posts/' + convertToSlug(meta.title),
-                    title: meta.title + ' - Jethro May',
-                    description: meta.summary,
-                    type: 'article',
-                    images: [{
-                        url: config.siteUrl + '/img/me.jpg'
-                    }]
-                }}
+            <Meta
+                siteTitle={`${meta.title} - Jethro May`}
+                siteDescription={meta.summary}
             />
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
