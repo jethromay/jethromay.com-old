@@ -1,6 +1,10 @@
-import Head from 'next/head';
-import config from "../site.config";
 import React from "react";
+import Router from "next/router";
+import Head from 'next/head';
+import * as gtag from "../lib/gtag";
+import config from "../site.config";
+
+Router.events.on('routeChangeComplete', url => gtag.trackPageView(url));
 
 function Page({ title, description, children }) {
     return (
