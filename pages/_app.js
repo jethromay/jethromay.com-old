@@ -6,7 +6,6 @@ import * as gtag from "../lib/gtag";
 
 Router.events.on('routeChangeComplete', url => gtag.trackPageView(url));
 
-
 class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;

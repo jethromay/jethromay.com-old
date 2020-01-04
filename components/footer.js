@@ -1,5 +1,4 @@
 import React from "react";
-import config from "../site.config";
 
 export default class Footer extends React.Component {
     render() {
