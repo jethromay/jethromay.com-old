@@ -24,7 +24,6 @@ const Posts = () => {
                     <h1 className="font-bold text-5xl mb-4">Posts</h1>
                     <PostList />
                     <Newsletter />
-
                 </div>
             </main>
 
