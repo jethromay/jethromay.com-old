@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import config from "../site.config";
 
-export default function Meta(props) {
+export default function Seo(props) {
     return (
         <>
             <Head>

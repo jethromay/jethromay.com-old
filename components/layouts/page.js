@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import Meta from "../meta";
+import Seo from "../seo";
 import config from "../../site.config";
 
 export default function Page({meta, children}) {
     return (
         <div className="flex flex-col min-h-full">
-            <Meta
+            <Seo
                 siteTitle={`${meta.title} - Jethro May`}
                 siteDescription={meta.summary}
             />

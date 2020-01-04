@@ -6,7 +6,7 @@ import MarkdownComponent from "../markdown-component";
 import Head from "next/head";
 import config from '../../site.config';
 
-export default function Post({ meta, children }) {
+export default function Post({props, meta, children}) {
 
     function convertToSlug(title) {
         return title
