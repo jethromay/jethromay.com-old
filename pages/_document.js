@@ -1,13 +1,16 @@
-import React from 'react'
 import Document, { Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from '../lib/gtag';
 
-export default class extends Document {
-
+class PersonalSite extends Document {
     render() {
         return (
             <html lang="en">
             <Head>
+                {/*<link rel="alternate" type="application/rss+xml" href="/feed.xml" />*/}
+            </Head>
+            <body>
+                <Main />
+                <NextScript />
                 <script
                     async
                     src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -22,10 +25,6 @@ export default class extends Document {
           `,
                     }}
                 />
-            </Head>
-            <body>
-                <Main />
-                <NextScript />
             </body>
             </html>
         )
