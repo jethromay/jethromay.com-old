@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import config from "../../site.config";
 import Meta from "../meta";
+import config from "../../site.config";
 
 export default function Page({meta, children}) {
     return (
