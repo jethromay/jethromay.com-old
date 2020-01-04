@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import config from '../../site.config';
-import { MDXProvider } from '@mdx-js/react';
+import { MDXProvider } from "@mdx-js/react";
 import MarkdownComponent from "../markdown-component";
+import Head from "next/head";
+import config from '../../site.config';
 
 export default function Post({ meta, children }) {
 
@@ -25,15 +26,17 @@ export default function Post({ meta, children }) {
 
     return (
         <div className="flex flex-col min-h-full">
-            <title>{`${meta.title} - Jethro May`}</title>
-            <meta name="description" content={meta.summary} />
-            <link rel="icon" href="/favicon.ico" />
+            <Head>
+                <title>{`${meta.title} - Jethro May`}</title>
+                <meta name="description" content={meta.summary} />
+                <link rel="icon" href="/favicon.ico" />
 
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={config.twitterAccount} />
-            <meta name="twitter:title" content={config.siteTitle} />
-            <meta name="twitter:description" content={config.siteDescription} />
-            <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:creator" content={config.twitterAccount} />
+                <meta name="twitter:title" content={config.siteTitle} />
+                <meta name="twitter:description" content={config.siteDescription} />
+                <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
+            </Head>
             <Header />
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
                 <article className="md:mt-20 lg:mb-20">
