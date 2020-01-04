@@ -5,13 +5,6 @@ import posts from "../posts/index";
 
 const PostList = () => {
 
-    function convertToSlug(title) {
-        return title
-            .toLowerCase()
-            .replace(/ /g,'-')
-            .replace(/[^\w-]+/g,'');
-    }
-
     function reformatDate(fullDate) {
         const date = new Date(fullDate);
         return date.toDateString().slice(4);
@@ -28,7 +21,7 @@ const PostList = () => {
                     <header>
                         <div className="flex items-center">
                             <h1 className="text-2xl mb-0 mr-3">
-                                <Link href={post.url}>
+                                <Link href={post.path}>
                                     <a>
                                         {post.title}
                                     </a>
@@ -42,7 +35,7 @@ const PostList = () => {
                     </header>
                     <p>{post.description}</p>
                     <footer>
-                        <Link href={post.url}>
+                        <Link href={post.path}>
                             <a className="underline text-blue-400 hover:text-blue-500">
                                 Read more
                             </a>
