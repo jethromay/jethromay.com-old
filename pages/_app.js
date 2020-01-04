@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import "../public/css/main.css";
 
-class MyApp extends App {
+export default class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
 
@@ -11,5 +11,3 @@ class MyApp extends App {
         )
     }
 }
-
-export default MyApp
