@@ -23,10 +23,11 @@ const Posts = () => {
                 <div className="container lg:mt-20 lg:mb-20" id="posts">
                     <h1 className="font-bold text-5xl mb-4">Posts</h1>
                     <PostList />
+                    <Newsletter />
+
                 </div>
             </main>
 
-            <Newsletter />
 
             <Footer />
         </Page>

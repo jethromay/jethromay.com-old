@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../header";
 import Footer from "../footer";
 import Seo from "../social-meta";
-import {MDXProvider} from "@mdx-js/tag";
+import { MDXProvider } from "@mdx-js/tag";
 import MarkdownComponent from "../markdown-component";
 import Page from "../page";
 
