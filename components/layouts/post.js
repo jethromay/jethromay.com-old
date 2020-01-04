@@ -3,11 +3,11 @@ import Header from "../header";
 import Footer from "../footer";
 import { MDXProvider } from "@mdx-js/tag";
 import MarkdownComponent from "../markdown-component";
-import Seo from "../seo";
+import Seo from "../social-meta";
 import config from '../../site.config';
 import Page from "../page";
 
-export default function Post({meta, children}) {
+export default function PostLayout({meta, children}) {
 
     function convertToSlug(title) {
         return title

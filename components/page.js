@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import config from "../site.config";
+import React from "react";
 
 function Page({ title, description, children }) {
     return (
@@ -13,7 +14,9 @@ function Page({ title, description, children }) {
                     />
                 )}
             </Head>
-            {children}
+            <div className="flex flex-col min-h-full">
+                {children}
+            </div>
         </div>
     );
 }
