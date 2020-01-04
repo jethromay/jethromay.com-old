@@ -28,7 +28,7 @@ const PostList = () => {
                     <header>
                         <div className="flex items-center">
                             <h1 className="text-2xl mb-0 mr-3">
-                                <Link href={post.path} as={`/posts/${convertToSlug(post.title)}`}>
+                                <Link href={post.url}>
                                     <a>
                                         {post.title}
                                     </a>
@@ -42,7 +42,7 @@ const PostList = () => {
                     </header>
                     <p>{post.description}</p>
                     <footer>
-                        <Link href={post.path}>
+                        <Link href={post.url}>
                             <a className="underline text-blue-400 hover:text-blue-500">
                                 Read more
                             </a>
