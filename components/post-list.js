@@ -42,7 +42,7 @@ const PostList = () => {
                     </header>
                     <p>{post.description}</p>
                     <footer>
-                        <Link href={`/posts/` + convertToSlug(post.title)} as={post.path}>
+                        <Link href={post.path}>
                             <a className="underline text-blue-400 hover:text-blue-500">
                                 Read more
                             </a>
