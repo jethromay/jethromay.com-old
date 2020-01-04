@@ -2,6 +2,12 @@ import Document, { Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from '../lib/gtag';
 
 class PersonalSite extends Document {
+
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+    }
+
     render() {
         return (
             <html lang="en">

@@ -9,8 +9,5 @@
   "env": {
     "MAILCHIMP_URL": "@mailchimp-url"
   },
-  "builds": [{ "src": "package.json", "use": "@now/next" }],
-  "routes": [
-    { "src": "/posts/(?<page>[^/]+)$", "dest": "/posts?page=$page" }
-  ]
+  "builds": [{ "src": "package.json", "use": "@now/next" }]
 }
