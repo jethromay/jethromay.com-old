@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import { MDXProvider } from "@mdx-js/react";
+import { MDXProvider } from "@mdx-js/tag";
 import MarkdownComponent from "../markdown-component";
-import Head from "next/head";
+import Seo from "../seo";
 import config from '../../site.config';
+import Page from "../page";
 
-export default function Post({props, meta, children}) {
+export default function Post({meta, children}) {
 
     function convertToSlug(title) {
         return title
@@ -42,20 +43,9 @@ export default function Post({props, meta, children}) {
                         </div>
                     </header>
                     <MDXProvider components={MarkdownComponent}>
-                        <Head>
-                            <title>{`${meta.title} - Jethro May`}</title>
-                            <meta name="description" content={meta.description} />
-
-                            <meta name="og:title" content={meta.title} />
-                            <meta name="og:description" content={meta.description} />
-                            <meta name="og:image" content={`https://jethromay.com/img/me.jpg`} />
-
-                            <meta name="twitter:card" content="summary_large_image" />
-                            <meta name="twitter:creator" content={config.twitterAccount} />
-                            <meta name="twitter:title" content={config.siteTitle} />
-                            <meta name="twitter:description" content={config.siteDescription} />
-                            <meta name="twitter:image" content="https://jethromay.com/img/me.jpg" />
-                        </Head>
+                        <Page title={`${meta.title} - Jethro May`}>
+                            <Seo {...meta} />
+                        </Page>
                         {children}
                     </MDXProvider>
                 </article>

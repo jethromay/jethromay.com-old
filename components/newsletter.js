@@ -33,7 +33,7 @@ export default class Newsletter extends React.Component {
                                                     EMAIL: emailRef.current.value,
                                                 });
 
-                                                gtag.event({
+                                                gtag.trackEvent({
                                                     action: 'subscribe_newsletter',
                                                     category: 'engagement',
                                                     label: 'Subscribed to newsletter',
