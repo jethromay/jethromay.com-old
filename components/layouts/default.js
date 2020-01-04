@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import Meta from "../meta";
+import Seo from "../seo";
 
 export default function Layout(props) {
     return (
         <div className="flex flex-col min-h-full">
-            <Meta
+            <Seo
                 siteTitle={`${props.siteTitle} - Jethro May`}
                 siteDescription={props.siteDescription}
             />

@@ -1,12 +1,16 @@
 import React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
-
+import Document, { Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from '../lib/gtag';
 
-export default class extends Document {
+export default class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx);
+        return { ...initialProps };
+    }
+
     render() {
         return (
-            <html>
+            <html lang="en">
             <Head>
                 <script
                     async
@@ -24,8 +28,8 @@ export default class extends Document {
                 />
             </Head>
             <body>
-            <Main />
-            <NextScript />
+                <Main />
+                <NextScript />
             </body>
             </html>
         )
