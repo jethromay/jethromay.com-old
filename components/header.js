@@ -36,7 +36,7 @@ export default class Header extends React.Component {
                         className="brand justify-between flex items-center xs:w-full sm:w-full md:w-full md:px-0 lg:px-0 lg:w-1/2">
                         <Link href="/">
                             <a className="flex text-black font-bold no-underline hover:no-underline">
-                                <span class="text-lg">{config.siteTitle}</span>
+                                <span className="text-lg">{config.siteTitle}</span>
                             </a>
                         </Link>
 
