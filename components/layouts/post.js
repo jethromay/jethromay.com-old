@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Footer from "../footer";
-import { MDXProvider } from "@mdx-js/tag";
+import { MDXProvider } from "@mdx-js/react";
 import MarkdownComponent from "../markdown-component";
 import Seo from "../social-meta";
 import config from '../../site.config';
@@ -43,9 +43,7 @@ export default function PostLayout({meta, children}) {
                             </a>
                         </div>
                     </header>
-                    <MDXProvider components={MarkdownComponent}>
-                        {children}
-                    </MDXProvider>
+                    <MDXProvider components={MarkdownComponent} children={children} />
                 </article>
             </main>
             <Footer />

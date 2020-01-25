@@ -6,7 +6,7 @@
   "author": "Jethro May <hello@jethromay.com>",
   "dependencies": {
     "@mdx-js/loader": "^1.5.3",
-    "@mdx-js/tag": "^0.20.3",
+    "@mdx-js/react": "^1.5.5",
     "@next/mdx": "^9.1.7",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.7.3",
