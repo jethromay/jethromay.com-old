@@ -1,6 +1,6 @@
 const website = {
     siteTitle: 'Jethro May',
-    siteDescription: 'Jethro May is a web developer and writer with a passion for Laravel & JavaScript',
+    siteDescription: 'Jethro May is a full-stack web developer and writer with a passion for Laravel',
     siteUrl: 'https://jethromay.com',
     sitePostsUrl: 'https://jethromay.com/posts/',
     siteAuthor: 'Jethro May',
