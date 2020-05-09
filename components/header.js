@@ -5,9 +5,13 @@ import config from '../site.config';
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            scrolled: false
+            scrolled: false,
+            showMenu: false
         };
+
+        this.toggleMenu = this.toggleMenu.bind(this);
     }
 
     componentDidMount() {
@@ -26,6 +30,10 @@ export default class Header extends React.Component {
         }
     };
 
+    toggleMenu() {
+        this.setState({ showMenu: !this.state.showMenu })
+    }
+
     render() {
         return (
             <header id="header" className={`${ this.state.scrolled ? `scroll` : `` } w-full bg-white lg:p-2 xs:border-2 xs:border-gray-200 sm:border-2 sm:border-gray-200 md:border-2 md:border-gray-200 lg:border-0 fixed top-0 z-50`}>
@@ -38,37 +46,43 @@ export default class Header extends React.Component {
                         </Link>
 
                             <div className="flex lg:hidden">
-                                <button onClick={this.showToggleNav}>
-                                    <svg className="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                <button onClick={this.toggleMenu}>
+                                    <svg className={`block h-6 w-6 ${this.state.showMenu ? 'fill-current' : ''}`} stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                        { this.state.showMenu ?
+                                            <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                                            :
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                        }
                                     </svg>
                                 </button>
-                                <nav className="border-b-2 py-3 px-4 xs:hidden lg:hidden xl:hidden" role="navigation">
-                                    <ul className="flex flex-col justify-between">
-                                        <li className="mb-2">
-                                            <Link href="/">
-                                                <a className="text-gray-600 font-normal">Home</a>
-                                            </Link>
-                                        </li>
-                                        <li className="mb-2">
-                                            <Link href="/about">
-                                                <a className="text-gray-600 font-normal">About</a>
-                                            </Link>
-                                        </li>
-                                        <li className="mb-2">
-                                            <Link href="/posts">
-                                                <a className="text-gray-600 font-normal">Posts</a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link href="/contact">
-                                                <a className="text-gray-600 font-normal">Contact</a>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
+                        { this.state.showMenu &&
+                        <nav className={`${ this.state.showMenu ? `flex` : `xs:hidden` } flex-1 pl-0 pb-0 py-3 px-4 lg:hidden xl:hidden`} role="navigation">
+                            <ul className="flex flex-col justify-between">
+                                <li className="mb-2">
+                                    <Link href="/">
+                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Home</a>
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link href="/about">
+                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>About</a>
+                                    </Link>
+                                </li>
+                                <li className="mb-2">
+                                    <Link href="/posts">
+                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Posts</a>
+                                    </Link>
+                                </li>
+                                <li className="">
+                                    <Link href="/contact">
+                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Contact</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
+                        }
 
                         <nav className="w-full flex-grow xs:hidden sm:hidden lg:flex lg:items-center lg:w-1/2 lg:block mt-2 lg:mt-0"
                              id="nav-content" role="navigation" aria-label="main navigation">

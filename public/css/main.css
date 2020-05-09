@@ -101,5 +101,5 @@ p:not(:last-child) {
 }
 
 #latest-posts article:not(:only-child):not(:last-child) {
-    @apply border-b-2
+    @apply border-b-2 pb-8
 }
