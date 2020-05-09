@@ -12,7 +12,6 @@ class PersonalSite extends Document {
         return (
             <html lang="en">
             <Head>
-                {/*<link rel="alternate" type="application/rss+xml" href="/feed.xml" />*/}
                 <style dangerouslySetInnerHTML={{__html: `
                     @font-face {
                       font-family: 'Inter';

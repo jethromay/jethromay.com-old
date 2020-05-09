@@ -62,22 +62,22 @@ export default class Header extends React.Component {
                             <ul className="flex flex-col justify-between">
                                 <li className="mb-2">
                                     <Link href="/">
-                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Home</a>
+                                        <a className="text-gray-600 font-normal">Home</a>
                                     </Link>
                                 </li>
                                 <li className="mb-2">
                                     <Link href="/about">
-                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>About</a>
+                                        <a className="text-gray-600 font-normal">About</a>
                                     </Link>
                                 </li>
                                 <li className="mb-2">
                                     <Link href="/posts">
-                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Posts</a>
+                                        <a className="text-gray-600 font-normal">Posts</a>
                                     </Link>
                                 </li>
                                 <li className="">
                                     <Link href="/contact">
-                                        <a className="text-gray-600 font-normal" onClick={this.state.showMenu = false}>Contact</a>
+                                        <a className="text-gray-600 font-normal">Contact</a>
                                     </Link>
                                 </li>
                             </ul>
