@@ -1,6 +1,5 @@
 import React  from "react";
 import Header from "../components/header";
-import Project from "../components/project";
 import Newsletter from "../components/newsletter";
 import PostList from "../components/post-list";
 import Page from "../components/page";
@@ -50,21 +49,15 @@ export default () => {
 
                 <section className="mt-8 mb-10" id="latest-posts">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Posts</h2>
+                        <h2 className="font-bold text-3xl mb-6 text-left xs:mb-3">
+                            Latest Posts
+                        </h2>
                         <PostList />
                     </div>
                 </section>
 
-                <hr className="border bg-green-100" />
-
-                <section className="mt-8 mb-16">
-                    <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-8 text-left">Latest Projects</h2>
-                        <Project />
-                    </div>
-                </section>
-
                 <Newsletter />
+
             </main>
 
             <Footer />

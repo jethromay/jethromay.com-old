@@ -12,7 +12,15 @@ class PersonalSite extends Document {
         return (
             <html lang="en">
             <Head>
-                {/*<link rel="alternate" type="application/rss+xml" href="/feed.xml" />*/}
+                <style dangerouslySetInnerHTML={{__html: `
+                    @font-face {
+                      font-family: 'Inter';
+                      font-style: normal;
+                      font-weight: 400;
+                      src: url(https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZJhiJ-Ck-_seA.woff2) format('woff2');
+                    }
+                }
+                `}}/>
             </Head>
             <body>
                 <Main />

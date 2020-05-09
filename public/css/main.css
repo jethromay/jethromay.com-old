@@ -2,6 +2,7 @@
 @tailwind components;
 
 html, body {
+    font-family: 'Inter', sans-serif;
     @apply h-full
 }
 
@@ -31,7 +32,7 @@ h3 {
 
 @media screen and (min-width: 320px) and (max-width: 1023px) {
     main {
-        margin-top: 130px;
+        margin-top: 100px;
     }
 }
 
@@ -89,6 +90,24 @@ p:not(:last-child) {
     @apply mt-8
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    #latest-posts article {
+        @apply mt-4
+    }
+}
+
 #posts article {
     @apply mt-8
+}
+
+#latest-posts article:not(:only-child):not(:last-child) {
+    @apply border-b-2 pb-10 mb-10
+}
+
+#latest-posts article:first-child {
+    @apply pt-0
+}
+
+#latest-posts article:last-child {
+    @apply border-b-0 pb-0
 }

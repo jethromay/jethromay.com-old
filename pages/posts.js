@@ -12,8 +12,8 @@ const Posts = () => {
         <Page title="Posts - Jethro May">
             <Seo
                 image="/img/me.jpg"
-                title="Posts - Jethro May"
-                url={`${config.siteUrl}/posts`}
+                title="Articles - Jethro May"
+                url={`${config.siteUrl}/articles`}
                 description={config.siteDescription}
             />
 
