@@ -99,3 +99,7 @@ p:not(:last-child) {
 #posts article {
     @apply mt-8
 }
+
+#latest-posts article:not(:only-child):not(:last-child) {
+    @apply border-b-2
+}
