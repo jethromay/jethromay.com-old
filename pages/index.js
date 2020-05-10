@@ -9,10 +9,10 @@ import config from "../site.config";
 
 export default () => {
     return (
-        <Page title="Jethro May - Web Developer & Writer">
+        <Page title="Jethro May - Full Stack Web Developer & Writer">
             <Seo
                 image="/img/me.jpg"
-                title="Jethro May - Web Developer & Writer"
+                title="Jethro May - Full Stack Web Developer & Writer"
                 url={config.siteUrl}
                 description={config.siteDescription}
             />
@@ -49,9 +49,6 @@ export default () => {
 
                 <section className="mt-8 mb-10" id="latest-posts">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-6 text-left xs:mb-3">
-                            Latest Posts
-                        </h2>
                         <PostList />
                     </div>
                 </section>
