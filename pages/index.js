@@ -9,10 +9,10 @@ import config from "../site.config";
 
 export default () => {
     return (
-        <Page title="Jethro May - Web Developer & Writer">
+        <Page title="Jethro May - Full Stack Web Developer & Writer">
             <Seo
                 image="/img/me.jpg"
-                title="Jethro May - Web Developer & Writer"
+                title="Jethro May - Full Stack Web Developer & Writer"
                 url={config.siteUrl}
                 description={config.siteDescription}
             />
