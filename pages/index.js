@@ -22,7 +22,7 @@ export default () => {
             <main className="flex-grow container mx-auto xs:px-4 sm:px-4 md:px-4 lg:px-0 md:mt-20 lg:mt-20">
                 <div className="intro lg:pt-20 lg:pb-10 mb-10">
                     <div className="flex flex-col">
-                        <h1 className="font-bold text-6xl xs:text-5xl sm:text-5xl">Hey, I'm Jethro.</h1>
+                        <h1 className="font-bold text-6xl xs:text-4xl sm:text-5xl">Hey, I'm Jethro.</h1>
                         <p className="mt-0 mb-4">I am a full-stack web developer & writer with a passion for Laravel.</p>
                         <div className="flex justify-start items-center text-gray-500">
                             <a className="flex items-center block mr-5 hover:text-gray-700"
@@ -49,9 +49,6 @@ export default () => {
 
                 <section className="mt-8 mb-10" id="latest-posts">
                     <div className="container mx-auto">
-                        <h2 className="font-bold text-3xl mb-6 text-left xs:mb-3">
-                            Latest Posts
-                        </h2>
                         <PostList />
                     </div>
                 </section>
